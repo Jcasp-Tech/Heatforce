@@ -90,12 +90,24 @@
 	}
 
 	:global(.saveButton) {
-		background: linear-gradient(#0A1E34, #0F3B59);
-		border: #F6E51B;
-		color: #fff;
+		background: linear-gradient(#0A1E34, #0F3B59) !important;
+		border: none !important;
+		color: #fff !important;
 		padding: 8px 25px;
 		border-radius: 10px;
 		font-size: 22px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: linear-gradient(#0F3B59, #0A1E34) !important;
+			opacity: 0.9;
+		}
+
+		&:disabled {
+			opacity: 0.6;
+			cursor: not-allowed;
+		}
 	}
 
 	:global(.about-us-header) {

@@ -154,7 +154,7 @@ const ContactUs = () => {
                       <button
                         type="submit"
                         disabled={isLoading}
-                        className="saveButton text-dark fw-bold mt-4"
+                        className="saveButton fw-bold mt-4"
                       >
                         {isLoading && <DefaultSkeleton />} Submit
                       </button>

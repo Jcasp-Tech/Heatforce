@@ -19,8 +19,8 @@ const AboutUsFourthStatsCardsSection = () => {
                         />
                         <AnimatedText>
                             {/* <p>+1500</p> */}
-                            <p>700+</p>
-                            <span>Solar Engineers</span>
+                            <p>100+</p>
+                            <span>certified engineers</span>
                         </AnimatedText>
 
                     </div>
@@ -28,8 +28,8 @@ const AboutUsFourthStatsCardsSection = () => {
                         <div className="d-flex">
                             <div className={`${dFlexJustifyAlign} ${styles.cardDesktop} ${styles.cardMargins} ${styles.cardShadow}`}>
                                 <AnimatedText>
-                                    <p>+1354</p>
-                                    <span>Five Star Reviews</span>
+                                    <p>700+</p>
+                                    <span>five-star reviews Trust Pilot Reviews</span>
                                 </AnimatedText>
                             </div>
                             <div className={`${dFlexJustifyAlign} ${styles.cardDesktop} ${styles.cardMargins} ${styles.cardShadow}`}>
@@ -43,14 +43,14 @@ const AboutUsFourthStatsCardsSection = () => {
                         <div className="d-flex">
                             <div className={`${dFlexJustifyAlign} ${styles.cardDesktop} ${styles.cardMargins} ${styles.cardShadow}`}>
                                 <AnimatedText>
-                                    <p>+1600</p>
-                                    <span>Trustpilot review</span>
+                                    <p>784</p>
+                                    <span>reviews total on Trustpilot</span>
                                 </AnimatedText>
                             </div>
                             <div className={`${dFlexJustifyAlign} ${styles.cardDesktop} ${styles.cardMargins} ${styles.cardShadow}`}>
                                 <AnimatedText>
-                                    <p>16,000+</p>
-                                    <span>Installs</span>
+                                    <p>60,000+</p>
+                                    <span>total installations completed</span>
                                 </AnimatedText>
                             </div>
                         </div>
@@ -67,8 +67,8 @@ const AboutUsFourthStatsCardsSection = () => {
                                 loading="lazy"
                             />
                             <AnimatedText>
-                                <p>700+</p>
-                                <span>Solar Engineers</span>
+                                <p>100+</p>
+                                <span>certified engineers</span>
                             </AnimatedText>
                         </div>
                         <div className={`${dFlexJustifyAlign} ${styles.cardMobile} ${styles.cardMargins} ${styles.cardShadow}`}>
@@ -81,20 +81,20 @@ const AboutUsFourthStatsCardsSection = () => {
                     <div className="d-flex flex-column">
                         <div className={`${dFlexJustifyAlign} ${styles.cardMobile} ${styles.cardMargins} ${styles.cardShadow}`}>
                             <AnimatedText>
-                                <p>+1354</p>
-                                <span>Five Star Reviews</span>
+                                <p>700+</p>
+                                <span>five-star reviews Trust Pilot Reviews</span>
                             </AnimatedText>
                         </div>
                         <div className={`${dFlexJustifyAlign} ${styles.cardMobile} ${styles.cardMargins} ${styles.cardShadow}`}>
                             <AnimatedText>
-                                <p>+1600</p>
-                                <span>Trustpilot reviews</span>
+                                <p>784</p>
+                                <span>reviews total on Trustpilot</span>
                             </AnimatedText>
                         </div>
                         <div className={`${dFlexJustifyAlign} ${styles.cardMobile} ${styles.cardMargins} ${styles.cardShadow}`}>
                             <AnimatedText>
-                                <p>16,000+</p>
-                                <span>Installs</span>
+                                <p>60,000+</p>
+                                <span>total installations completed</span>
                             </AnimatedText>
                         </div>
                     </div>

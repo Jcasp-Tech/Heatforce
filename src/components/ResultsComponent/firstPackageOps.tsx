@@ -150,7 +150,7 @@ const FirstPackageOps = (props: FirstPackageOpsProps) => {
       <Toaster />
       <div className="mb-60 w-100">
         <div className="row col-12 mainDivContainer">
-          <div className="col-6 mapContainer">
+          <div className="col-12 mapContainer">
             <div className="bgSky ridues padding24">
               <div className="d-flex justify-content-between align-items-center">
                 <div className="font24Blue">{webLeadType === 1 ? "Your house" : "Your home"}</div>
@@ -338,13 +338,15 @@ const FirstPackageOps = (props: FirstPackageOpsProps) => {
               ) : null}
             </div>
           </div>
-          <div className="col-6 col-lg-6 mx-auto my-3 mt-xl-0 mb-xl-0 btnDivContainer">
-            <div
-              className="nav nav-pills navPillsCustom row g-3 position-relative"
-              id="myTab"
-            >
-              {quoteData?.lead_status !== 'CONFIRM' && (
-                <div className="btnWrapper z-1">
+        </div>
+        {quoteData?.lead_status !== 'CONFIRM' && (
+          <div className="row col-12 mt-4">
+            <div className="col-12 d-flex justify-content-center btnDivContainer">
+              <div
+                className="nav nav-pills navPillsCustom row g-3"
+                id="myTab"
+              >
+                <div className="btnWrapper" style={{ position: 'relative', left: 'auto', display: 'flex', gap: '20px' }}>
                   <div className="nav-item col-auto col-xl" role="presentation">
                     <div className="animationBorder borderRadius20px z-0">
                       <div className="m1px position-rel z-1 w-100">
@@ -357,6 +359,7 @@ const FirstPackageOps = (props: FirstPackageOpsProps) => {
                           role="tab"
                           aria-controls="home-tab-pane"
                           onClick={() => handleRestartSurvey()}
+                          style={{ whiteSpace: 'nowrap' }}
                         >
                           Restart Estimate
                         </button>
@@ -376,6 +379,7 @@ const FirstPackageOps = (props: FirstPackageOpsProps) => {
                             setOpenSaveEstimatePopup(true);
                             setDisableScroll(true);
                           }}
+                          style={{ whiteSpace: 'nowrap' }}
                         >
                           Save Estimate
                         </button>
@@ -383,31 +387,10 @@ const FirstPackageOps = (props: FirstPackageOpsProps) => {
                     </div>
                   </div>
                 </div>
-              )}
-              <div className="col-11 d-flex img-wrapper result-page-jiffy-img">
-                <div className="img-user-icon">
-                  <Image
-                    quality={100}
-                    src="/images/Jiffy.webp"
-                    alt="user-icon"
-                    width={340}
-                    height={385}
-                  />
-                </div>
-                <div className="img-jiffy-icon">
-                  <Image
-                    quality={100}
-                    src="/images/pages/result/jiffy-img.webp"
-                    alt="jiffy"
-                    className="jiffyImg"
-                    width={150}
-                    height={150}
-                  />
-                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
