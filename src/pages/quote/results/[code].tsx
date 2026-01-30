@@ -16,12 +16,17 @@ import { nextRedirect, setProcessingCounter } from '@/utils/helpers';
 import useList from '@/utils/useList';
 import { useLoadScript } from '@react-google-maps/api';
 import { useEffect, useState, useCallback } from 'react';
+import { useRouter } from 'next/router';
 
 export interface ResultsProps {
   codeId: any;
 }
 
-const Result = ({ codeId }: ResultsProps) => {
+const Result = ({ codeId: codeIdProp }: ResultsProps) => {
+  const router = useRouter();
+  // Get codeId from props (server-side) or router (client-side navigation)
+  const codeId = codeIdProp || (router.query?.code as string) || '';
+  
   const [, setLeadData] = useState<any>({});
   const [quoteData, setQuoteData] = useState<any>({});
   const [webLeadType, setWebLeadType] = useState<any>();
@@ -46,8 +51,21 @@ const Result = ({ codeId }: ResultsProps) => {
       try {
         const params = { ...apiParam, randomString: _id };
         const res = await getWebLeadResultsDataAPI(params);
+        
+        if (!res) {
+          throw new Error('No data received from server');
+        }
+        
         const allLeadDatas = res?.leadData;
         const allRoofDatas = res?.roofData;
+        
+        if (!allLeadDatas) {
+          throw new Error('Lead data not found. The quote may not exist or has expired.');
+        }
+        
+        if (!allRoofDatas || !Array.isArray(allRoofDatas) || allRoofDatas.length === 0) {
+          throw new Error('Roof data not found. Please try again.');
+        }
 
         const roofDatas = allRoofDatas.map((roof: any, index: number) => {
           const draw_points = roof.draw_points
@@ -236,7 +254,17 @@ const Result = ({ codeId }: ResultsProps) => {
         // setLoadingSaving(false);
       } catch (error: any) {
         console.error('Error fetching data:', error);
-        setError(error?.message || 'Failed to load quote results. Please try again.');
+        console.error('Error details:', {
+          message: error?.message,
+          response: error?.response?.data,
+          codeId: _id,
+          params,
+        });
+        setError(
+          error?.response?.data?.message || 
+          error?.message || 
+          'Failed to load quote results. Please check the URL and try again.'
+        );
         setApiQuoteLoading(false);
         setLoadingSaving(false);
       }
@@ -289,10 +317,13 @@ const Result = ({ codeId }: ResultsProps) => {
   }, [codeId, setApiParam]);
 
   useEffect(() => {
-    if (codeId) {
+    if (codeId && router.isReady) {
+      console.log('Fetching results for codeId:', codeId);
       getResults(codeId);
+    } else if (!codeId && router.isReady) {
+      console.warn('codeId is missing:', { codeIdProp, routerCode: router.query?.code });
     }
-  }, [codeId, getResults]);
+  }, [codeId, router.isReady, getResults, codeIdProp]);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window.localStorage) {
@@ -373,9 +404,16 @@ const Result = ({ codeId }: ResultsProps) => {
           </>
         )}
 
-      {!isLoaded && !error && (
+      {!isLoaded && !error && !codeId && (
         <div style={{ padding: '2rem', textAlign: 'center' }}>
           <p>Loading maps...</p>
+        </div>
+      )}
+
+      {!codeId && router.isReady && !error && (
+        <div style={{ padding: '2rem', textAlign: 'center' }}>
+          <h2>Invalid Quote Code</h2>
+          <p>The quote code is missing or invalid. Please check the URL and try again.</p>
         </div>
       )}
     </>
