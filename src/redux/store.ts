@@ -1,7 +1,7 @@
 import type { AnyAction, Store } from '@reduxjs/toolkit';
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
-import type { MakeStore } from 'next-redux-wrapper';
+import type { Context, MakeStore } from 'next-redux-wrapper';
 import { createWrapper, HYDRATE } from 'next-redux-wrapper';
 
 export { HYDRATE };
@@ -32,7 +32,7 @@ setupListeners(getStore().dispatch);
 /**
  * @param initialState The store's initial state (on the client side, the state of the server-side store is passed here)
  */
-const makeStore: MakeStore<Store<RootState>> = () => {
+const makeStore: MakeStore<Store<RootState>> = (_context: Context) => {
   return getStore();
 };
 

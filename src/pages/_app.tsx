@@ -289,7 +289,7 @@ const getInitialProps = wrapper.getInitialPageProps(
 function AppWrapper(props: any) {
   const { initialProps, initialState, ...restProps } = props;
 
-  const store = useMemo(() => makeStore(), []);
+  const store = useMemo(() => makeStore(undefined as any), []);
 
   useMemo(() => {
     if (initialState) {
