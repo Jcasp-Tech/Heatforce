@@ -27,22 +27,25 @@ const Result = ({ codeId }: ResultsProps) => {
   const [webLeadType, setWebLeadType] = useState<any>();
   const [apiQuoteLoading, setApiQuoteLoading] = useState(false);
   const [loadingSaving, setLoadingSaving] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: GOOGLE_API_KEY as string,
     libraries: libraries as any,
   });
 
-  const { apiParam } = useList({
+  const { apiParam, setApiParam } = useList({
     queryParams: { randomString: '' },
   });
 
   const getResults = useCallback(
     async (_id: string) => {
       setApiQuoteLoading(true);
+      setError(null);
 
       try {
-        const res = await getWebLeadResultsDataAPI(apiParam);
+        const params = { ...apiParam, randomString: _id };
+        const res = await getWebLeadResultsDataAPI(params);
         const allLeadDatas = res?.leadData;
         const allRoofDatas = res?.roofData;
 
@@ -229,10 +232,11 @@ const Result = ({ codeId }: ResultsProps) => {
         setApiQuoteLoading(false);
 
         console.log('allLeadData', { quoteData: quoteDatas });
-
+        setError(null);
         // setLoadingSaving(false);
-      } catch (error) {
+      } catch (error: any) {
         console.error('Error fetching data:', error);
+        setError(error?.message || 'Failed to load quote results. Please try again.');
         setApiQuoteLoading(false);
         setLoadingSaving(false);
       }
@@ -277,10 +281,18 @@ const Result = ({ codeId }: ResultsProps) => {
 
   useEffect(() => {
     if (codeId) {
-      apiParam.randomString = codeId || '';
+      setApiParam((prev: any) => ({
+        ...prev,
+        randomString: codeId || '',
+      }));
+    }
+  }, [codeId, setApiParam]);
+
+  useEffect(() => {
+    if (codeId) {
       getResults(codeId);
     }
-  }, [codeId, apiParam, getResults]);
+  }, [codeId, getResults]);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window.localStorage) {
@@ -316,11 +328,34 @@ const Result = ({ codeId }: ResultsProps) => {
           />
         )}
 
+      {error && !apiQuoteLoading && !loadingSaving && (
+        <div style={{ padding: '2rem', textAlign: 'center' }}>
+          <h2>Error Loading Results</h2>
+          <p>{error}</p>
+          <button
+            onClick={() => {
+              setError(null);
+              if (codeId) {
+                getResults(codeId);
+              }
+            }}
+            style={{
+              marginTop: '1rem',
+              padding: '0.5rem 1rem',
+              cursor: 'pointer',
+            }}
+          >
+            Try Again
+          </button>
+        </div>
+      )}
+
       {isLoaded &&
         quoteData &&
         typeof quoteData === 'object' &&
         Object.keys(quoteData).length > 0 &&
-        webLeadType !== undefined && (
+        webLeadType !== undefined &&
+        !error && (
           <>
             <ResultComponent
               {...{
@@ -337,6 +372,12 @@ const Result = ({ codeId }: ResultsProps) => {
             />
           </>
         )}
+
+      {!isLoaded && !error && (
+        <div style={{ padding: '2rem', textAlign: 'center' }}>
+          <p>Loading maps...</p>
+        </div>
+      )}
     </>
   );
 };
