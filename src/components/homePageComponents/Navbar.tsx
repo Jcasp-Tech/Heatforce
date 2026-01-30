@@ -24,6 +24,7 @@ const Navbar = () => {
             width={240}
             height={60}
             onClick={() => (window.location.href = '/')}
+            style={{ cursor: 'pointer' }}
           />
         </div>
         {/* Desktop view navigation */}
