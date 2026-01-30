@@ -4,3 +4,24 @@
 
 [build.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Frontend
+  NEXT_ENV = "production"
+  BASEPATH = "/admin"
+  NEXT_BASE_PATH = "/admin"
+  IS_ENABLED_ENCRYPTION = "false"
+  # JWT
+  NEXT_PUBLIC_JWT_EXPIRATION = "5m"
+  # API
+  NEXT_API_ENDPOINT = "https://old.cessolarshop.com/apibackend"
+  NEXT_LIVE_ENDPOINT = "https://solarshopphase2.jcasptechnologies.com/"
+
+# Note: Sensitive variables should be added via Netlify UI:
+# - PAYLOAD_SECRET_KEY
+# - NEXTAUTH_SECRET
+# - NEXT_PUBLIC_JWT_SECRET
+# - NEXT_PUBLIC_JWT_REFRESH_TOKEN_SECRET
+# - NEXTAUTH_URL (should be your production URL)
+# - NEXT_PUBLIC_APP_URL (should be your production URL)
+# - NEXTAUTH_BASEPATH (will be set automatically based on BASEPATH)
+# - NEXT_ENDPOINT (will be set automatically)
+# - NEXT_FRONTEND_ENDPOINT (if needed)
