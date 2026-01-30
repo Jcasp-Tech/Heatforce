@@ -14,7 +14,7 @@ import App from 'next/app';
 import type { AppContextType } from 'next/dist/shared/lib/utils';
 import Head from 'next/head';
 import { Router } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Cookies } from 'react-cookie';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { Provider, useStore } from 'react-redux';
@@ -45,17 +45,14 @@ const MyApp = ({
   pathNameProps,
 }: AppProps | any): JSX.Element => {
 
-  // Intercom must run only in the browser (SSR/static export has no window)
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      Intercom({ app_id: 'zv64k8s5' });
-    }
-  }, []);
+  Intercom({
+    app_id: 'zv64k8s5',
+  });
+
 
   const queryClient = new QueryClient();
 
   const { statusCode = 200 } = pageProps || {};
-  const pathName = pathNameProps ?? '';
   const [isLoading, setIsLoading] = useState(false);
   const store = useStore();
 
@@ -82,8 +79,8 @@ const MyApp = ({
     <>
       <Head>
         <title>
-          {pathName.length > 1
-            ? `${pathName} | CES Solar`
+          {pathNameProps.length > 1
+            ? `${pathNameProps} | CES Solar`
             : ' CES Solar'}
         </title>
         <meta
@@ -92,7 +89,7 @@ const MyApp = ({
           key="viewport"
         />
 
-        {pathName === ' Quote Results' && (
+        {pathNameProps === ' Quote Results' && (
           <>
             <meta
               name="keywords"
@@ -109,16 +106,16 @@ const MyApp = ({
             />
           </>
         )}
-        {(pathName !== ' ' ||
-          pathName === ' Survey' ||
-          pathName === ' About Us' ||
-          pathName === ' Our Products' ||
-          pathName === ' Contact Us' ||
-          pathName === ' Faq' ||
-          pathName === ' deposit-goods-advance' ||
-          pathName === ' complaints-procedure' ||
-          pathName === ' Privacy Policy') &&
-          (pathName === ' Quote Results' && (
+        {(pathNameProps !== ' ' ||
+          pathNameProps === ' Survey' ||
+          pathNameProps === ' About Us' ||
+          pathNameProps === ' Our Products' ||
+          pathNameProps === ' Contact Us' ||
+          pathNameProps === ' Faq' ||
+          pathNameProps === ' deposit-goods-advance' ||
+          pathNameProps === ' complaints-procedure' ||
+          pathNameProps === ' Privacy Policy') &&
+          (pathNameProps === ' Quote Results' && (
             <>
               <meta
                 name="keywords"

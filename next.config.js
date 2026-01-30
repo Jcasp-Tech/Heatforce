@@ -29,9 +29,9 @@ module.exports = withBundleAnalyzer({
   // You can remove `basePath` if you don't need it.
   reactStrictMode: true,
   images: {
+    unoptimized: true,
     domains: ['localhost','solarshopphase2.jcasptechnologies.com','cessolarshop.com'],
     deviceSizes: [320, 420, 768, 1024, 1200],
     imageSizes: [16, 32, 48, 64, 96],
-
   },
 });
