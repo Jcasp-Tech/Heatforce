@@ -52,7 +52,7 @@ const API = (force = false): AxiosInstance => {
   }
 
   axiosInstance = axios.create({
-    baseURL: process.env.NEXT_API_ENDPOINT || 'https://cessolarshop.com/apibackend',
+    baseURL: process.env.NEXT_API_ENDPOINT ,
   });
   console.log('axiosInstance', axiosInstance)
   return axiosInstance;

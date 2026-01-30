@@ -39,7 +39,7 @@ const FifthSection = () => {
                   We are regulated by the FCA
                 </AnimatedHeading>
                 <AnimatedText>
-                  <p className={styles.secondDescSec2}>Heatforce is authorised and regulated by the Financial Conduct Authority FRN 4261333. We act as a credit broker not a lender and offer finance from JN Bank UK Ltd. Credit is subject to terms and conditions and affordability.</p>
+                  <p className={styles.secondDescSec2}>Heatforce is authorised and regulated by the Financial Conduct Authority FRN 737889. We act as a credit broker not a lender and offer finance from JN Bank UK Ltd. Credit is subject to terms and conditions and affordability.</p>
                 </AnimatedText>
               </div>
               <div className={styles.secondLeftInnerDiv}>

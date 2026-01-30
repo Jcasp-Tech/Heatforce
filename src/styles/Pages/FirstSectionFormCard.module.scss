@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 .mainfirstSectionContainer{
     position: absolute;
     display: flex;
@@ -6,6 +8,7 @@
     align-items: center;
     background-color: white;
     border-radius: 50px;
+    font-family: #{$body-font}, sans-serif;
     
     @media (max-width:768px) {
         max-width: 470px;
@@ -80,6 +83,12 @@ transform: translate(-50%, -50%);
         align-items: start;
         width: 100%;
         font-weight: 500;
+        font-family: #{$body-font}, sans-serif;
+
+        .heroEmphasis{
+            font-weight: 600;
+            font-family: #{$body-font}, sans-serif;
+        }
 
         .firstHeading1{
             @media (max-width:375px) {
@@ -132,6 +141,8 @@ transform: translate(-50%, -50%);
         }
         .secondHeadingInfo1{
             width: 80%;
+            font-weight: 400;
+            font-family: #{$body-font}, sans-serif;
 
             @media (max-width:375px) { 
                 width: 80%;

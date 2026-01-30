@@ -1,5 +1,18 @@
 .videoDiv {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.getStartedBtn {
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background-color: #1a1a1a !important;
+    color: #fff !important;
+
+    p {
+      color: #fff !important;
+    }
   }
+}

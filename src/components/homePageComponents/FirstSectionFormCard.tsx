@@ -9,7 +9,7 @@ const FirstSectionFormCard = ({ register,
         <div className={styles.mainfirstSectionContainer + " firstPostCode"}  >
             <div className={styles.firstHeading} >
                 <div className={styles.firstHeading1} >
-                    Get an <b>unbeatable</b> online solar price in less than <b> <u> 60 seconds </u></b>
+                    Get an <span className={styles.heroEmphasis}>unbeatable</span> online solar price in less than <span className={styles.heroEmphasis}> <u> 60 seconds </u></span>
                 </div>
             </div><div className={styles.secondHeadingInfo} >
                 <div className={styles.secondHeadingInfo1}>

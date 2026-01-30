@@ -156,9 +156,11 @@ const FooterSection = () => {
                   <AnimatedText>
                     <li className="list-group-item fw-bold">
                       <Link
-                        href="/privacy-policy"
+                        href="https://heatforce.co.uk/privacy-policy/"
                         title="Privacy Policy"
                         className="nav-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Privacy Policy
                       </Link>
@@ -168,9 +170,11 @@ const FooterSection = () => {
                   <AnimatedText>
                     <li className="list-group-item fw-bold">
                       <Link
-                        href="/cookie-policy"
+                        href="https://heatforce.co.uk/cookie-policy/"
                         title="Cookie policy"
                         className="nav-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Cookie policy
                       </Link>
@@ -180,9 +184,25 @@ const FooterSection = () => {
                   <AnimatedText>
                     <li className="list-group-item fw-bold">
                       <Link
-                        href="/deposit-goods-advance"
-                        title="Cookie policy"
+                        href="https://heatforce.co.uk/terms-and-conditions/"
+                        title="Terms and Conditions"
                         className="nav-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Terms and Conditions
+                      </Link>
+                    </li>
+                  </AnimatedText>
+                  <br />
+                  <AnimatedText>
+                    <li className="list-group-item fw-bold">
+                      <Link
+                        href="https://heatforce.co.uk/finance-options/"
+                        title="Deposits, Goods and Advance Payments"
+                        className="nav-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Deposits, Goods and Advance Payments
                       </Link>
