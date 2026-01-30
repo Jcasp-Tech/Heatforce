@@ -1,0 +1,129 @@
+.navbar {
+    width: 100%;
+    height: auto;
+    background-color: #0A1E34; // Primary
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    @media (min-width:768px) {
+  padding: 20px 10px;
+  
+}
+       
+  }
+  
+  .navbarLogo {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .navbarElements {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+    color: #ffffff;
+
+    @media (max-width: 1200px) {
+      gap: 10px
+    }
+  
+    .dropdownItem {
+      font-family: "Roboto";
+      font-size: 18px;
+      color: #ffffff;
+      @media (max-width: 1200px) {
+        font-size: 15px
+      }
+      @media (max-width: 992px) {
+        font-size: 10px
+      }
+    }
+  
+    a {
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+      padding-bottom: 5px;
+      overflow: hidden;
+  
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px; // Adjust the height of the border as needed
+        background-color: #F6E51B; // Secondary/accent yellow
+        transition: width 0.3s ease;
+      }
+  
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+  
+  .mobileNavbar {
+    position: relative;
+    padding: 1rem;
+  }
+  
+  .menuToggle {
+    font-size: 2rem;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menutoggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .mobileMenuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+  
+  .dropdownMenu {
+    transform: translate(-50%, -50%);
+    background-color: #f8f9fa;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .dropdownItem {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdownItemHover {
+    background-color: #e9ecef;
+  }
+  
+  @media (min-width: 769px) {
+    .mobile-view {
+      display: none; /* Hide on desktop */
+    }
+  
+    .desktop-view {
+      display: block; /* Show on desktop */
+    }
+  }

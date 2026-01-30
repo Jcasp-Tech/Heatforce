@@ -1,0 +1,212 @@
+.calculator {
+	width: 550px !important;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+
+	:global(.ant-modal-content) {
+		border-radius: 14px !important;
+	}
+
+	:global(.ant-modal-close) {
+		background: #000;
+		border-radius: 100%;
+		padding: 10px;
+		width: fit-content;
+		height: fit-content;
+
+		:global(.ant-modal-close-x) {
+			font-size: 18px !important;
+
+			:global(svg) {
+				fill: #fff !important;
+			}
+		}
+	}
+
+	:global(p) {
+		color: #000;
+		font-size: 0.875rem;
+	}
+
+	:global(h3) {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+	}
+
+	:global(.months-sec) {
+		width: 100%;
+		background-color: #0A1E34;
+		color: #fff;
+		display: flex !important;
+		align-items: center !important;
+		gap: 12px;
+		border-radius: 40px;
+		padding: 12px 25px;
+	}
+
+	:global(.calculator-container) {
+		padding: 0px 30px;
+		// padding-top: 0px;
+
+		@media (max-width: 768px) {
+			padding: 11px;
+		}
+	}
+
+	:global(.input-range) {
+		width: 100%;
+
+		input {
+			width: 100%;
+		}
+
+		:global(.MuiSlider-rail) {
+			background-color: #dfe1e3 !important;
+			height: 12px !important; /* Track height */
+		}
+
+		:global(.MuiSlider-track) {
+			background-color: #0A1E34 !important;
+			height: 12px !important; /* Track height */
+			border: none !important;
+		}
+
+		:global(.MuiSlider-thumb) {
+			background-color: #0A1E34 !important;
+			box-shadow: 0px 0px 0px 4px #dfe1e3 !important;
+		}
+	}
+
+	:global(.month-price-container) {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		margin-top: 20px;
+	}
+
+	:global(.month-price-container h5) {
+		@media (max-width: 430px) {
+			font-size: 1.05rem !important;
+		}
+	}
+
+	:global(.heading-top) {
+		font-size: 0.8rem;
+		line-height: 1.5;
+		letter-spacing: 0.00938em;
+		color: #636564;
+		font-weight: 400;
+		margin-bottom: 0;
+	}
+
+	:global(.headingLabel) {
+		font-size: 1rem;
+		line-height: 1.5;
+		letter-spacing: 0.00938em;
+		color: #636564;
+		font-weight: 500;
+		margin-bottom: 0;
+	}
+
+	:global(.month-wise-sec) {
+		width: 100%;
+		background-color: #fff;
+		padding: 12px;
+		display: flex;
+		border-radius: 10px;
+		align-items: center;
+		justify-content: space-between;
+
+		h5 {
+			margin: 0;
+		}
+	}
+
+	:global(.interest-sec) {
+		background-color: #0A1E34;
+		color: #fff;
+		padding: 6px 14px;
+		border-radius: 10px;
+		align-items: center;
+	}
+
+	:global(.price-value-container) {
+		display: flex;
+		flex-direction: column;
+		// gap: 14px;
+		margin-top: 20px;
+	}
+
+	:global(.diff-price-sec) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-top: 1px solid #dfe1e3;
+		padding: 10px;
+
+		p {
+			margin: 0;
+		}
+		h5 {
+			margin: 0;
+		}
+	}
+	:global(.depositinput)
+	{
+		background-color: #F1F1F1;
+    outline: none;
+    border: none;
+	min-width: 54px;
+	max-width: 60px;
+}
+	:global(.financeSubDiv)
+	{
+	grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+	}
+	:global(.financeMainDiv)
+	{
+		position: relative;
+		background-color: transparent;
+		padding:10px;
+	}
+	:global(.financeSubDiv)
+	{
+	background-color: rgba(15, 59, 89, 0.05);
+	border-radius:10px;
+	border: 2px solid #0A1E34;
+	
+	display:grid;grid-template-columns: repeat(2, minmax(0, 1fr));
+	
+	}
+	:global(.calculationDiv)
+	{
+		display:flex;flex-direction:column;border-top-left-radius:10px;border-bottom-left-radius:10px;
+	}
+	:global(.calculationDivInfoDiv)
+	{
+	display:flex;flex-direction:column;
+	padding: 28px 20px 20px 20px;
+	}
+	@media screen and (min-width:992px) {
+		:global(.financeSubDiv)
+		{
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+		height: 100%;
+		}
+		:global(.calculationDiv)
+		{
+			height: 100%;
+		}
+		:global(.calculationDivInfoDiv)
+		{
+			height: 100%;
+
+		}
+		:global(.financeMainDiv)
+	{
+		height: 100%;
+	}
+	}
+}

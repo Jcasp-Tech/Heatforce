@@ -1,0 +1,223 @@
+.containerDiv{
+    width: 100%;
+    min-height: 350px;
+    // height: 260px;
+    border-radius: 10px;
+    background-color: rgba(15, 59, 89, 0.03);
+    @media (min-width: 993px) {
+        width: 570px;
+        margin: 0 auto 0 0;
+    }
+    @media (min-width: 1200px) {
+        width: 730px;
+        margin: 0 auto 0 0;
+    }
+
+    .gridcontainer{
+        background-color: rgba(15, 59, 89, 0.03);
+        display: flex;
+        width: 100%;
+        min-height: 100%;
+       padding: 15px 27px;
+       padding-bottom: 0px;
+    border-radius: 10px;
+
+        .financeCalculationDiv{
+            min-height: 100%;
+            width: 100%;
+    position: relative;
+
+    @media (min-width: 993px) {
+
+           width: 55%;
+    }
+            display: flex;
+            flex-direction: column;
+            p{
+                margin: 0 !important;
+            }
+            .textAboveHeading{
+                font-size: 8px;
+                @media (min-width: 993px) {
+                    font-size: 8px;
+                }
+                @media (max-width:375px) {
+                    font-size: 8px;
+                }
+                @media (min-width:376px) and (max-width:440px) {
+                    font-size: 10px;
+                }
+                @media (min-width:441px) and (max-width:992px) {
+               font-size: 12px;
+                }
+
+                color: #636564;
+                font-weight: 700;
+            }
+            .financeTotalText{
+                font-size: 16px;
+                font-weight: 700;
+                @media (min-width: 993px) {
+                    font-size: 26px;
+                    font-weight: 700;
+            }
+            }
+            .depositText{
+                font-size: 8px;
+                @media (min-width: 993px) {
+                    font-size: 8px;
+                }
+                @media (max-width:375px) {
+                    font-size: 8px;
+                }
+                @media (min-width:376px) and (max-width:440px) {
+                    font-size: 10px;
+                }
+                @media (min-width:441px) and (max-width:992px) {
+               font-size: 12px;
+                }
+            }
+            .depositInputDiv{
+                display: flex;
+                span{
+                    display: flex;
+                }
+                .depositInput
+                {
+                    background-color: #F1F1F1;
+                outline: none;
+                border: none;
+                min-width: 54px;
+                max-width: 60px;
+            }
+            }
+            .inputRange {
+		width: 100%;
+
+		input {
+			width: 100%;
+		}
+
+		:global(.MuiSlider-rail) {
+			background-color: #dfe1e3 !important;
+			height: 7px !important; /* Track height */
+		}
+
+		:global(.MuiSlider-track) {
+			background-color: #0A1E34 !important;
+			height: 7px !important; /* Track height */
+			border: none !important;
+		}
+
+		:global(.MuiSlider-thumb) {
+			background-color: #0A1E34 !important;
+			box-shadow: 0px 0px 0px 4px #dfe1e3 !important;
+		}
+        :global(.MuiSlider-root)
+        {
+            padding: 10px 0px !important;
+        }
+	}
+
+    .monthPriceContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		margin-top: 10px;
+	}
+
+	.monthPriceContainer h5{
+		@media (max-width: 430px) {
+			font-size: 1.05rem !important;
+		}
+	}
+    .monthWiseSec {
+		width: 100%;
+		background-color: #fff;
+		padding: 6px;
+		display: flex;
+		border-radius: 10px;
+		align-items: center;
+		justify-content: space-between;
+
+		h5 {
+			margin: 0;
+		}
+        .monthDiv{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+        .interestSec {
+            background-color: #0A1E34;
+            padding: 3px 11px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            align-items: center;
+        }
+    
+        .priceValueContainer {
+            display: flex;
+            flex-direction: column;
+            // gap: 14px;
+            margin-top: 20px;
+        }
+        .emiDurationText{
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .intrestText{
+            font-weight: 700;
+            font-size: 12px;
+        }
+	}
+    :global(.diff-price-sec) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-top: 1px solid #dfe1e3;
+		padding: 10px;
+
+		p {
+			margin: 0;
+		}
+		h5 {
+			margin: 0;
+		}
+	}
+        }
+        .financeCalculationInfoDiv{
+            min-height: 100%;
+            width: 0%;
+            display: none;
+            @media (min-width: 993px) {
+        
+                   width: 45%;
+                   display: flex;
+            }
+           
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-left: 25px;
+            padding-right: 8px;
+            max-height: 280px;
+            p{
+                padding: 0;
+                margin: 0;
+                font-size: 8px;
+                text-align: justify;
+                @media (min-width: 1200px) {
+        
+                    font-size: 10px;
+
+             }
+            }
+
+
+        }
+    }
+}

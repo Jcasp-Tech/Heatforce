@@ -1,0 +1,96 @@
+.AboutUsSeventhDescriptionImageSection {
+    
+    .descriptionTextImg {
+        width: 100%;
+        display: flex;
+        gap: 2vw !important;
+        padding-block: 7vw 7vw;
+        padding-inline: 10vw;
+        
+        @media (max-width: 768px) {
+            padding-block: 0vw 0vw;
+            padding-inline: 5vw;
+            // margin-inline: 2vw;
+            // gap: 0vw !important;
+        }
+        @media (min-width: 1320px) {
+            gap: 26.4px !important;
+            padding-block: 92.4px 92.4px;
+            padding-inline: 132px;
+        }
+
+    }
+    
+    .descriptionTextDesktop {
+        width: 85%;
+        font-weight: 500;    
+        // font-size: calc(1.3vw + 4px);
+        font-size: 1.95vw;
+        line-height: 1.2;
+        
+        @media (max-width: 768px) {
+            display: none;
+        }
+        @media (min-width: 1320px) {
+            font-size: 25.74px;
+        }
+    }
+
+    .descriptionTextMobile {
+        display: none;
+        font-weight: 500;
+        
+        @media (max-width: 768px) {
+            display: block;
+            font-size: 3.21vw;
+            line-height: 1.2;
+            padding: 6vw 8vw 5vw;
+        }
+    }
+
+    .spacingBetweenText {
+        height: 1.5vw;
+        @media (max-width: 768px) {
+            height: 3vw;
+        }
+        @media (min-width: 1320px) {
+            height: 19.8px;
+        }
+    }
+    
+    .rightSideImg {
+        aspect-ratio: 1.173;
+        border-radius: 4vw;
+        margin-bottom: 4vw;
+        background-image: url("/images/RECRUITMENT&PROJECTS COVER-1.webp");
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        @media (max-width: 768px) {
+            aspect-ratio: 1.17;
+            margin-bottom: 0vw;
+            border-radius: 8vw;
+        }
+        @media (min-width: 1320px) {
+            border-radius: 52.8px;
+            margin-bottom: 52.8px;
+        }
+    }
+
+    img {
+        aspect-ratio: 1;
+        max-width: 100%;
+        // height: 8vw;
+        // @media (max-width: 768px) {
+        //     display: none;
+        // }
+    }
+
+    // .brandLogoDiv {
+    //     display: block;
+    //     @media (max-width: 768px) {
+    //         display: none !important;
+    //     }
+    // }
+}

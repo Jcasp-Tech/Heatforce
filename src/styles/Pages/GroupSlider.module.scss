@@ -1,0 +1,78 @@
+.bannerHeaderShort {
+    font-size: 40px;
+    display: flex;
+    font-family: "Roboto";
+    justify-content: center;
+    // padding-inline: 100px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 500ms ease-out, transform 500ms ease-out;
+    margin-bottom: 25px;
+  
+    @media (max-width: 620px) {
+      font-size: 30px;
+    }
+    
+    @media (max-width: 550px) {
+      font-size: 24px;
+      margin-bottom: 0px !important;
+    }
+  }
+  
+  .bannerHeaderShortVisible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .awardsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 500ms ease-out, transform 500ms ease-out;
+
+    @media (max-width: 768px) {
+      gap: 20px;
+    }
+
+    .awrdsImgDiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        max-width: 200px;
+        object-fit: contain;
+      }
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+  
+  .awardsDivVisible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .trustBannerDiv {
+    height: auto;
+    // min-height: 250px;
+    width: 100%;
+    background: #e6f0f9;
+    padding: 50px;
+
+    @media (max-width: 430px) {
+      padding: 25px;
+    }
+  }
+  
+  .heatForceImg {
+    @media (max-width: 488px) {
+      margin-top: -10%;
+    }
+  }

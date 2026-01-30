@@ -1,0 +1,12 @@
+.footer-block,
+.footer-disclaimer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+
+.footer-block.visible,
+.footer-disclaimer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

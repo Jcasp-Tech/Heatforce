@@ -1,0 +1,81 @@
+.ThankyouPage {
+    background: #E6F0F9;
+	position: relative;
+    height: 100%;
+    padding: 150px;
+    padding-top: 40px;  
+    min-height: 90vh;
+
+
+    @media (max-width: 768px) {
+        padding: 20px 0px 20px 0px;
+    }
+
+	@media (min-width: 1800px) {
+		padding-top: 90px;
+		padding-right: 700px;
+		padding-bottom: 50px;
+		padding-left: 700px;
+	}
+ 
+    :global(.thankyouContainer) {
+        background-color: white;
+		border-radius: 10px;
+		padding: 20px 30px 20px 10px;
+		box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+		// max-width: 640px;
+		margin: auto;
+	}
+
+
+	:global(.buttonContainer) {
+		display: 'inline-block';
+		margin-left:1.5vw; 
+	}
+
+    :global(.saveButton) {
+		background:#E6F0F9;
+		border: white;
+		padding: 8px 25px;
+		border-radius: 20px;
+        text-decoration: none;
+        color: black;
+        // margin-right: 30px
+	}
+
+	:global(.thankyouText) {
+        font-weight: 900;
+		font-size: 2.2vw ;
+		color: black;
+		padding-left: 2vw;
+		padding-right: 2vw;
+
+		@media (max-width: 768px) {
+			font-size: 4.2vw ;																																																			
+		}
+	
+		@media (min-width: 1800px) {
+			font-size: 1.5vw ;
+			padding-left: 1.5vw;
+			padding-right: 1.5vw;
+		}
+	}
+
+	:global(.contentText) {
+        font-weight: bold;
+		font-size: 1.3vw;
+		color: black;
+		padding-left: 2vw;
+		padding-right: 2vw;
+
+		@media (max-width: 768px) {
+			font-size: 3.2vw ;																																																	
+		}
+	
+		@media (min-width: 1800px) {
+			font-size: 1vw ;
+			padding-left: 1.5vw;
+			padding-right: 1.5vw;
+		}
+	}
+}												

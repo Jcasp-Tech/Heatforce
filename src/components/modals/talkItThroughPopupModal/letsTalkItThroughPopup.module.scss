@@ -1,0 +1,129 @@
+.letsTalkItThroughPopup {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(16px);
+    z-index: 1000;
+
+    input {
+        border: 0px;
+        border-radius: 8px;
+        padding: 8px 24px;
+        width: 100%;
+        @media (max-width: 576px) {
+            padding: 6px 20px;
+        }
+    }
+
+    label {
+        letter-spacing: 1px;
+    }
+
+    .transparentContainer {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // background-color: #aaa;
+        overflow: auto;
+    }
+
+    .dialogBox {
+        background-color: rgba(15, 59, 89, 0.05); 
+        // width: 25vw;
+        max-width: 580px;
+        margin-inline: 12px;
+        border: 2px solid #0A1E34;
+        border-radius: 16px;
+    }
+    
+    .contentSection {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 44px 36px;
+
+        @media (max-width: 576px) {
+            margin: 34px 28px;
+        }
+    }
+
+    .letsTalk {
+        color: #000;
+        // font-size: 43px;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1;
+        @media (max-width: 576px) {
+            font-size: 28px;
+        }
+    }
+    
+    .descriptionText1 {
+        color: #666;
+        // font-size: 18px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+    
+    .descriptionText2 {
+        color: #000;
+        font-weight: 600;
+        // font-size: 18px;
+        font-size: 16px;
+        line-height: 2;
+        letter-spacing: 0.5px;
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+
+    .buttonSection {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        @media (max-width: 576px) {
+            flex-direction: column;
+        }
+    }
+
+    .buttonClass {
+        width: 100%;
+        color: #000;
+        border-radius: 8px;
+        padding-block: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 2;
+        cursor: pointer;
+        @media (max-width: 576px) {
+            font-size: 14px;
+            padding-block: 6px;
+        }
+    }
+    
+    .blueBG {
+        background-color: #0A1E34;
+        border: 1px solid #0A1E34;
+        color: #fff !important;
+    }
+
+    .greyBG {
+        background-color: #cacdd9;
+    }
+input:focus {
+    outline: none;
+}
+}

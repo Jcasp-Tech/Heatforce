@@ -1,0 +1,27 @@
+$body-font: "Roboto";
+$heading-font: "Montserrat";
+$body-bg: #F8F8F8;
+$body-color: #000000;
+$muted-color: #909090;
+$muted-color-1: #737373;
+
+// Brand Colors
+$primary-color: #0A1E34;
+$secondary-color: #0F3B59;
+$accent-color: #F6E51B;
+$primary-bg-text-color: #ffffff; // Text color on primary (#0A1E34) background
+
+// Legacy colors (keeping for compatibility, will be replaced)
+$muted-border: #DADADA;
+$white-color: #FFF;
+$red-color: #C91010;
+$gray-color: #E0E0E0;
+$table-heading-color: #F0F0F0;
+$tab-non-active-color: #999999;
+
+// Brand Gradients
+$gradient-primary: linear-gradient(to right, #0A1E34, #0F3B59);
+$gradient-primary-vertical: linear-gradient(#0A1E34, #0F3B59);
+$gradient-button: linear-gradient(#0A1E34, #0F3B59);
+$gradient-hero: linear-gradient(to top right, #F6E51B, #0F3B59, #0A1E34);
+$gradient-accent: linear-gradient(to right, #F6E51B, #FFD700);

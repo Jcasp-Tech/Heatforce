@@ -1,0 +1,114 @@
+.FourthStatsCardsSection {
+    padding-block: 3vw;
+    background-color: #e6f0f9;
+
+    @media (max-width: 768px) {
+        padding-block: 6vw 8vw;
+        background: linear-gradient(45deg, #fff, transparent 30%) ,
+                    radial-gradient(ellipse at top, #fff, transparent 50%),
+                    #e6f0f9;
+    }
+    @media (min-width: 1320px) {
+        padding-block: 39.6px;
+    }
+
+    p {
+        margin: 0px;
+        font-family: "Montserrat";
+        font-size: 3.2vw;
+        line-height: 1.6;
+        @media (max-width: 768px) {
+            font-size: 5.7vw;
+        }
+        @media (min-width: 1320px) {
+            font-size: 42.24px;
+        }
+    }
+
+    span {
+        font-family: "Montserrat";
+        font-size: 1.85vw;
+        line-height: 1;
+        @media (max-width: 768px) {
+            font-size: 3.3vw;
+        }
+        @media (min-width: 1320px) {
+            font-size: 24.42px;
+        }
+    }
+
+    .cardDesktop {
+        background-color: #fff;
+        border-radius: 1vw;
+        min-height: calc(13vw );
+        min-width: calc( 13vw*1.85 );
+        max-width: calc( 13vw*1.85 );
+
+        padding: 1.6vw;
+        margin-top: auto;
+        align-items: end;
+        // text-align: end;
+
+        @media (max-width: 768px) {
+            display: none !important;
+        }
+        @media (min-width: 1320px) {
+            border-radius: 13.2px;
+            min-height: 171.6px;
+            min-width: 317.46px;
+            max-width: 317.46px;
+            padding: 21.12px;
+        }
+    }
+
+    .cardMobile {
+        background-color: #fff;
+        border-radius: 1.5vw;
+        min-height: calc(23vw );
+        min-width: calc( 23vw*1.85 );
+        max-width: calc( 23vw*1.85 );
+
+        padding: 3vw;
+        margin-top: auto;
+        align-items: end;
+        // text-align: end;
+
+        @media (min-width: 769px) {
+            display: none !important;
+        }
+
+    }
+
+    .cardMargins {
+        margin: 0.5vw !important;
+        @media (max-width: 768px) {
+            margin: 1vw 2vw !important;
+        }
+        @media (min-width: 1320px) {
+            margin: 6.6px !important;
+        }
+    }
+
+    .cardShadow {
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 0.8vw 1.8vw 0vw;
+        @media (max-width: 768px) {
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 0.6vw 5vw 0vw;
+        }
+        @media (min-width: 1320px) {
+            box-shadow: rgba(0, 0, 0, 0.6) 0px 10.56 23.76 0vw;
+        }
+    }
+
+    .solarCar {
+        width: 100% !important;
+        height: auto !important;
+        padding-bottom: 2.5vw;
+        @media (max-width: 768px) {
+            padding-bottom: 4vw;
+        }
+        @media (min-width: 1320px) {
+            padding-bottom: 33px;
+        }
+    }
+
+}

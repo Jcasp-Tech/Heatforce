@@ -1,0 +1,107 @@
+.AboutUsFirstHeroSection {
+    
+    .blueCircles {
+        background: #e6f0f9;
+        // border-bottom-left-radius: 50%;
+        // border-bottom-right-radius: 50%;
+        border-radius: 0px 0px 100% 100% / 0px 0px 15vw 15vw;
+        @media (max-width: 768px) {
+            border-radius: 0px 0px 100% 100% / 0px 0px 9vw 9vw;
+        }
+        @media (min-width: 1320px) {
+            border-radius: 0px 0px 100% 100% / 0px 0px 198px 198px;
+        }
+    }
+    
+    .titleText {
+        width: 60%;
+        padding-block: 4vw 5vw;
+        font-weight: 900;
+        // font-size: calc(2.5vw + 1px);
+        // font-size: 2.5vw ;
+        font-size: 2.45vw ;
+        line-height: 1.3;
+        letter-spacing: 1px;
+                
+        // width: 792px;
+        // font-size: 32.34px;
+        // padding-block: 66px;
+
+
+        @media (max-width: 768px) {
+            width: 90%;
+            font-size: 3.6vw;
+            padding-block: 10vw;
+        }
+        @media (min-width: 1320px) {
+            font-size: 32.34px ;
+            padding-block: 52.8px 66px;
+        }
+    }
+
+    .descriptionTextImg {
+        width: 100%;
+        display: flex;
+        // gap: 2vw !important;
+        margin-top: 2vw;
+        margin-bottom: 3vw;
+        padding-inline: 10vw;
+        
+        // @media (max-width: 992px) {
+        //     // margin-inline: 2vw;
+        //     padding-inline: 4vw;
+        //     gap: 0vw !important;
+        // }
+        @media (min-width: 1320px) {
+            margin-top: 26.4px;
+            margin-bottom: 39.6px;
+            padding-inline: 132px;
+    
+        }
+
+    }
+    
+    .descriptionTextDesktop {
+        font-weight: 500;    
+        // font-size: calc(1.3vw + 4px);
+        font-size: 1.91vw;
+        line-height: 1.2;
+        
+        @media (max-width: 768px) {
+            display: none;
+        }
+        @media (min-width: 1320px) {
+            font-size: 25.212px;
+        }
+    }
+
+    .descriptionTextMobile {
+        display: none;
+        font-weight: 500;
+        
+        @media (max-width: 768px) {
+            display: block;
+            font-size: 3.21vw;
+            line-height: 1.2;
+            padding: 0vw 8vw 5vw;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: 8vw;
+        @media (max-width: 768px) {
+            display: none;
+        }
+        @media (min-width: 1320px) {
+            height: 105.6px;
+        }
+    }
+
+    .brandLogoDiv {
+        display: block;
+        @media (max-width: 768px) {
+            display: none !important;
+        }
+    }
+}

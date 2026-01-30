@@ -1,0 +1,50 @@
+.wrapper {
+	position: relative;
+	left: 0;
+	top: 50%;
+	right: 0;
+	bottom: 0;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-align: center;
+	align-items: center;
+	z-index: 99999;
+
+	.backdrop {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		// background-color: rgb(255, 248, 248, 0.3);
+		opacity: 1;
+		z-index: 0;
+	}
+	.preLoader {
+		position: relative;
+		color: #fff;
+		text-align: center;
+		z-index: 10;
+
+		span {
+			display: flex;
+			margin: auto;
+		}
+	}
+}
+
+.layoutLoader {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+@media (max-width: 768px) {
+	.wrapper {
+		top: 20%;
+	}
+}

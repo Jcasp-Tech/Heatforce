@@ -1,0 +1,120 @@
+.AboutUsSecondImagesSection {
+    background-color: #fff;
+
+    .imageShadow {
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 0.8vw 1.8vw 0vw;
+        @media (max-width: 768px) {
+            box-shadow: rgba(0, 0, 0, 0.6) 0px 1vw 2.5vw 0vw;
+        }
+        @media (min-width: 1320px) {
+            box-shadow: rgba(0, 0, 0, 0.6) 0px 10.56 23.76 0vw;
+        }
+    }
+    
+    .divDesktop {
+        overflow: hidden;
+        border-radius: 3vw;
+        min-height: calc(18vw );
+        min-width: calc( 18vw*1.3 );
+
+        @media (max-width: 768px) {
+            display: none !important;
+        }
+        @media (min-width: 1320px) {
+            border-radius: 39.6px;
+            min-height: 237.6px;
+            min-width: 308.88px;
+    
+        }
+    }
+
+    .divMobile {
+        overflow: hidden;
+        border-radius: 6vw;
+        min-height: calc(33vw );
+        min-width: calc( 33vw*1.3 );
+        
+        @media (min-width: 769px) {
+            display: none !important;
+        }
+    }
+    
+    // .imageGaps {
+    //     gap: 0vw !important;
+    // }
+
+    .imageMargins {
+        margin: 1.6vw !important;
+        @media (max-width: 768px) {
+            margin: 2vw !important;
+        }
+        @media (min-width: 1320px) {
+            margin: 21.12px !important;    
+        }
+    }
+
+    .img1 {
+        background-image: url("/images/pages/about-us/img-1.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .img2 {
+        background-image: url("/images/pages/about-us/img-2.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .img3 {
+
+        background-image: url("/images/pages/about-us/img-3.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .img4 {
+        height: fill;
+        background-image: url("/images/pages/about-us/img-4.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .img5 {
+        background-image: url("/images/pages/about-us/Image-3.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .img6 {
+        background-image: url("/images/pages/about-us/Image-1.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .img7 {
+        min-height: 26vw;
+        background-image: url("/images/pages/about-us/Image-2.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media (max-width: 768px) {
+            display: none;
+        }
+        @media (min-width: 1320px) {
+            min-height: 343.2px;
+        }
+    }
+
+}

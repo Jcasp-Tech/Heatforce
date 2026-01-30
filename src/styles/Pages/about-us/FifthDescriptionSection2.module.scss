@@ -1,0 +1,31 @@
+.FifthDescriptionSection2 {
+    
+    .descriptionTextDesktop {
+        font-weight: 500;
+        font-size: 1.96vw;
+        line-height: 1.2;
+        padding-inline: 10vw;
+        padding-block: 3vw 4vw;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+        @media (min-width: 1320px) {
+            font-size: 25.872px;
+            padding-inline: 132px;
+            padding-block: 39.6px 52.8px;
+        }
+    }
+
+    .descriptionTextMobile {
+        display: none;
+        font-weight: 500;
+        
+        @media (max-width: 768px) {
+            display: block;
+            font-size: 3.21vw;
+            line-height: 1.2;
+            padding: 3vw 8vw;
+        }
+    }
+}

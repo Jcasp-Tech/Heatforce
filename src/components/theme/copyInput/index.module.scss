@@ -1,0 +1,42 @@
+@import "../../../styles/variables.scss";
+.CopyInput {
+  height: 40px;
+  border-radius: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 222px;
+  background: #FFFFFFB2;
+  padding: 8px;
+  padding-top: 12px;
+  width: 100%;
+  
+  p {
+    line-height: 2;
+    color: #161528;
+  }
+
+  :global(.shareb) {
+    right: 5%;
+    top: 30%;
+    cursor: pointer;
+
+    &:hover {
+      path {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  :global(.editb) {
+    path {
+      fill: #161528;
+    }
+    &:hover {
+      path {
+        fill: $primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.infoContainer {
+	:global(.ant-modal-content) {
+		border-radius: 14px !important;
+	}
+
+	:global(.ant-modal-close) {
+		:global(.ant-modal-close-x) {
+			font-size: 18px !important;
+			display: none !important;
+		}
+	}
+
+	:global(button) {
+		padding: 5px 30px;
+		background: #000;
+		border: none;
+		border-radius: 6px;
+		color: #fff;
+		font-size: 24px;
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 768px) {
+			font-size: 19px;
+			padding: 4px 10px;
+		}
+	}
+
+	:global(.Restart-button) {
+		padding: 5px 30px;
+		background: #ff0000;
+		border: none;
+		border-radius: 6px;
+		color: #fff;
+		font-size: 24px;
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 768px) {
+			font-size: 19px;
+			padding: 4px 10px;
+		}
+	}
+
+	:global(.yp) {
+		display: flex;
+		align-items: center;
+		svg {
+			width: 35px;
+			height: 35px;
+			fill: #ff0000;
+			margin-right: 10px !important;
+		}
+
+		@media (max-width: 768px) {
+			font-size: 20px;
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+
+	:global(.qyp) {
+		color: #000;
+		font-size: 20px;
+		margin-bottom: 0;
+		text-align: center;
+		line-height: 1.4;
+
+		@media (max-width: 550px) {
+			flex-direction: column !important;
+		}
+	}
+}

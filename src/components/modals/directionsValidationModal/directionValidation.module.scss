@@ -1,0 +1,56 @@
+.infoContainer {
+	:global(.ant-modal-content) {
+		border-radius: 14px !important;
+	}
+
+	:global(.ant-modal-close) {
+		:global(.ant-modal-close-x) {
+			font-size: 18px !important;
+		}
+	}
+
+	:global(.cancelButton) {
+		padding: 5px 10px;
+		background: #000;
+		border: none;
+		border-radius: 6px;
+		color: #fff;
+		font-size: 16px;
+		gap: 4px;
+		display: flex;
+		align-items: center;
+		height: 50px;
+		width: 130px;
+		@media (max-width: 400px) {
+			padding: 5px 10px;
+			font-size: 16px;
+		}
+	}
+
+	:global(.saveButton) {
+		padding: 5px 10px;
+		background: linear-gradient(#0A1E34, #0F3B59);
+		color: #fff;
+		border: none;
+		border-radius: 6px;
+		color: #fff;
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+		height: 50px;
+		width: 120px;
+		@media (max-width: 400px) {
+			padding: 5px 10px;
+			font-size: 18px;
+		}
+	}
+
+	:global(.qyp) {
+		color: #000;
+		font-size: 18px;
+		margin-bottom: 0;
+		background-color: #e3e4e5;
+		padding: 20px;
+		border-radius: 20px;
+	}
+}

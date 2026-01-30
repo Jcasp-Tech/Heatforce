@@ -1,0 +1,1247 @@
+.resultPagePopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    // width: 100%;
+    // height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(16px);
+    z-index: 10;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    
+    .hideInMobile {
+        @media (max-width: 992px) {
+            display: none !important;    
+        }
+    }
+    .hideInDesktop {
+        display: none;
+        @media (max-width: 992px) {
+            display: unset !important;    
+        }    
+    }
+    .font666 {
+        color: #666;
+    }
+    .greenFont {
+        color: #00d162;
+    }
+
+    .font12 {
+        font-size: 1.2vw;
+    }
+    .font11 {
+        font-size: 1.1vw;
+    }
+    .font1 {
+        font-size: 1vw;
+    }
+    .font09 {
+        font-size: 0.9vw;
+    }
+    .font08 {
+        font-size: 0.8vw;
+    }
+    .font07 {
+        font-size: 0.7vw;
+    }
+    .font06 {
+        font-size: 0.6vw;
+    }
+    .font05 {
+        font-size: 0.5vw;
+    }
+
+    .letterSpacing05 {
+        letter-spacing: 0.5px;
+    }
+
+    .e4BG {
+        background-color: #e4e4e4;
+    }
+    .edf2f5_BG {
+        background-color: #edf2f5;
+    }
+    .e4e7eb_BG {
+        background-color: #e4e7eb;
+
+    }
+
+    .fw900 {
+        font-weight: 900;
+    }
+    .fw800 {
+        font-weight: 800;
+    }
+    .fw700 {
+        font-weight: 700;
+    }
+    .fw600 {
+        font-weight: 600;
+    }
+
+    .fw200 {
+        font-weight: 200;
+    }
+    .fw100 {
+        font-weight: 100;
+    }
+
+    .lineHeight1 {
+        line-height: 1;
+    }
+
+    .gap05{
+        gap: 0.5vw;
+    }
+    .gap1{
+        gap: 1vw;
+    }
+    .gap2{
+        gap: 2vw;
+    }
+    .gap3{
+        gap: 3vw;
+    }
+    .gap4{
+        gap: 4vw;
+    }
+
+    .dottedUnderline {
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-underline-offset: 2px;
+        @media (max-width: 992px) {
+            text-underline-offset: 1vw;
+        }
+    }
+
+    .solidUnderlineGrey {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-color: #bbb;
+    }
+    .bottomBorderSolidGreyDesktop {
+        border-bottom: 1px solid #bbb;
+        @media (max-width: 992px) {
+            border-bottom: unset;
+        }
+    }
+    .transparentContainer {
+        width: 100vw;
+        height: 100vh;
+        padding: 2vw 2vw 4vw 2vw; // adjust according to the height of closeButton
+        @media (max-width: 992px) {
+            padding: 3vw 0vw;
+        }
+    }
+
+    .closeButton {
+        // background-color: #000;
+        cursor: pointer;
+
+        color: #000;
+        font-size: 1vw;
+        border-radius: 100px;
+        margin-left: auto;
+        margin-right: auto;
+display: flex;
+justify-content: end;
+        width: 100%;
+        max-width: 1440px;
+
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        
+        @media (max-width: 992px) {
+            position: absolute;
+            margin-left: unset;
+            left: unset;
+
+            margin-right: auto;
+
+            width: 5vw;
+            height: 5vw;
+
+            top: 2vw;
+            left: auto;
+        }
+
+        svg {    
+            height: 2vw ;
+            width: 2vw ;
+            @media (max-width: 992px) {
+                width: 5vw;
+                height: 5vw;    
+            }
+        }
+
+    }
+    
+
+    .dialogBox {
+        overflow: auto;
+        display: grid;
+        max-width: 1440px;
+        margin-left: auto;
+        position: relative;
+        margin-right: auto;
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        gap: 58px;
+        padding: 2vw;
+        background-color: #fff;
+        border-radius: 2.5vw;
+        width: 100%;
+        // max-width: 1440px;
+        height: 100%;
+        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        @media (max-width: 992px) {
+            display: grid;
+            grid-template-columns: repeat(1,minmax(0,1fr));
+            gap: 0vw;
+            border-radius: 7vw;
+            padding: 8vw 8vw 12px 8vw;
+        }
+    }
+
+    .leftSection {
+        width:100%;  // also change width in .rightSection 
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        
+
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+    }
+    
+    .rightSection {
+        width:100%;
+         // also change width in .leftSection 
+        @media (min-width: 992px) {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+    }
+
+    .widthLimiterLeft {
+        // border: 1px solid;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vw;
+
+        @media (max-width: 992px) {
+            width: 100%;
+            gap: 2vw;
+        }
+    }
+    .widthLimiterRight {
+        // border: 1px solid;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vw;
+        
+        @media (max-width: 992px) {
+            width: 100%;
+            gap: 2vw;
+        }
+        @media (max-width:576px) {
+            padding-bottom: 70px;
+            
+        }
+    }
+
+    .primaryProductImageComponent {
+        position: relative;
+        background-color: #edf2f5;
+        border-radius: 0.25vw;
+        padding:8px;
+
+        display: grid;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        grid-template-rows:repeat(4,minmax(0,1fr)) ;
+        flex-direction: column;
+        // min-height: 200px;
+
+        @media (max-width: 992px) {
+            min-height: 310px;
+            height: 75vw;
+            max-height: 400px;
+            padding: 3vw;
+            border-radius: 1vw;
+        }
+        .topDiv{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            @media (max-width: 992px) {
+            gap: 5px;
+
+                display: grid;
+            flex-direction: column;
+            grid-template-rows: repeat(2,minmax(0,1fr));
+            align-items: center;
+            img{
+                max-height: 100%;
+                object-fit: contain;
+            }
+            }
+        }
+    }
+    .primaryProductImage {
+        position: absolute;
+        right: 0.5vw;
+        top: 1vw;
+        @media (max-width: 992px) {
+            right: 2vw;
+            top: 4vw;
+            
+        }
+    }
+    .imageSlider {
+        
+        display: grid;
+        grid-template-rows:repeat(5,minmax(0,1fr)) ;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        
+        @media (max-width:430px) {
+            
+            gap: 10px;
+        }
+
+        // padding-top: 16px;
+        // padding-bottom: 16px;
+        
+        // @media (max-width: 992px) {
+            
+        // }
+
+        div {
+            border-radius: 0.25vw;
+            background-color: #fff;
+            width: 35px;
+            height: 35px;
+            padding: 2px;
+
+            @media (min-width:431px) and (max-width: 992px ){
+                height: 40px;
+                width: 40px;
+            }
+
+        }
+    }
+    .CashPurchasesDiv{
+        margin-left: auto;
+        padding-right: 20px;
+        @media (min-width:1200px) {
+            padding-right: 40px;
+        }
+    }
+
+    .showMoreSection {
+        font-size:16px;
+        @media (min-width:1200px) {
+            font-size: 20px;
+        }
+        padding-right: 0.25vw;
+        @media (max-width: 992px) {
+            // display: none;
+            font-size: 2.2vw;
+        }
+    }
+
+    .specsSection {
+        padding-inline: 0.25vw;
+        @media (max-width: 992px) {
+            display: none;
+        }
+
+        .titleText {
+            font-size: 14px;
+            font-weight: 600;
+            @media (min-width:1200px) {
+                font-size: 16px;
+            }
+            @media (max-width: 992px) {
+                font-size: 2vw;
+            }
+    
+        }
+
+        .descriptionText {
+            color: #000;
+            font-size:8px;
+            font-weight: 600;
+
+            display: flex;
+            justify-content: space-between;
+            @media (min-width:1200px) {
+            font-size:10px;
+                
+            }
+
+            @media (max-width: 992px) {
+                font-size: 2.4vw;
+            }
+            div {
+                width: 100%;
+            }
+        }
+    }
+
+    .rightsideTitle {
+        font-size: 20px;
+        font-weight: 900;
+        @media (min-width:1200px) {
+            font-size: 22px;
+        }
+        @media (max-width: 992px) {
+            display: none;
+            font-size: 4vw;
+        }
+    }
+
+    .priceEstimateMonthlyPeriodWithImg {
+        display: flex;
+        gap: 2vw;
+        @media (max-width: 992px) {
+            justify-content: space-evenly;
+            // gap: 2vw;
+        }
+
+        .text1 {
+            font-size: 18px;
+            font-weight: 900;
+            line-height: 1.1;
+
+            @media (min-width:1200px) {
+                font-size: 20px;
+            }
+            @media (min-width:431px) and (max-width:576px) {
+                font-size: 14px;
+            }
+            @media (min-width:577px) and (max-width:662px) {
+                font-size: 16px;
+            }
+            @media (min-width:663px) and (max-width:992px) {
+                font-size: 18px;
+            }
+            @media (max-width:430px) {
+                font-size:12px;
+                // line-height: 1.5;
+            }            
+        }
+        .text2 {
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 700;
+            @media (min-width:1200px) {
+                font-size: 18px;
+            }
+            @media (min-width:431px) and (max-width:576px) {
+                font-size: 18px;
+            }
+            @media (min-width:577px) and (max-width:662px) {
+                font-size: 20px;
+            }
+            @media (min-width:663px) and (max-width:992px) {
+                font-size: 22px;
+            }
+
+            @media (max-width: 430px) {
+                font-size: 17px;
+            }
+        }
+
+        .perMonth {
+            font-size: 0.7vw;
+            padding-inline: 0.25vw;
+            
+            @media (max-width: 992px) {
+                font-size: 2.5vw;
+                padding-inline: 0.5vw;
+            }                
+        }
+    }
+
+    .estimatedStatsBlocksSection {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vw;
+        @media (max-width: 992px) {
+            gap: 2vw;
+        }
+    }
+
+    .estimatedStatsBlock {
+        padding: 12px;
+        border-radius: 0.25vw;
+        @media (max-width: 992px) {
+            padding: 1vw 1vw;
+            // height: 9.2vw;
+            border-radius: 1vw;
+            display: flex;
+            align-items: center;
+
+            div {
+                width: 100%;
+            }
+        }
+        .titleText { 
+            font-size: 13px;
+            font-weight: 600;
+            @media (min-width:1200px) {
+                font-size: 15px;
+            }
+            @media (min-width:376px) and (max-width: 460px) {
+                font-size: 9px;
+            }
+            @media (min-width:460px) and (max-width:576px) {
+                font-size: 11px;
+            }
+            @media (min-width:577px) and (max-width:662px) {
+                font-size: 13px;
+            }
+            @media (min-width:663px) and (max-width:992px) {
+                font-size: 15px;
+            }
+            @media (max-width:375px) {
+                font-size: 7px;
+            }
+            
+    
+        }
+
+        .numbersText1 {
+            font-size: 15px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            @media (min-width:376px)  and (max-width: 460px) {
+                font-size: 11px;
+            }
+            @media (min-width:460px) and (max-width:576px) {
+                font-size: 14px;
+            }
+            @media (min-width:577px) and (max-width:662px) {
+                font-size: 16px;
+            }
+            @media (min-width:663px) and (max-width:992px) {
+                font-size: 18px;
+            }
+
+
+            @media (max-width:375px) {
+                font-size: 7px;
+                
+            }
+        }
+
+        .numbersText2 {
+            font-size: 1.2vw;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            @media (max-width: 992px) {
+                font-size: 3.5vw;
+                text-align: end;
+                padding-right: 6vw;
+            }
+        }
+
+        .descriptionText1 {
+            color: #666;
+            font-size: 12px;
+            // font-weight: 100;
+            @media (min-width:1200px) {
+                font-size: 13px;
+            }
+            @media (min-width:376px) and (max-width: 480px) {
+                font-size: 7px;
+            }
+            @media (min-width:481px) and (max-width: 576px) {
+                font-size: 9px;
+            }
+            @media (min-width:577px) and (max-width: 662px) {
+                font-size: 11px;
+            }
+            @media (min-width:663px) and (max-width:992px) {
+                font-size: 13px;
+            }
+            @media (max-width:375px) {
+                font-size: 6px;
+                
+            }
+        }
+
+        .descriptionText2 {
+            color: #666;
+            font-size: 10px;
+            // font-weight: 100;
+            line-height: 1;
+            @media (min-width:1200px) {
+                font-size: 12px;
+            }
+            @media (max-width: 992px) {
+                font-size: 1.3vw;
+            }
+        }
+        .descriptionText21 {
+            color: #666;
+            font-size: 10px;
+            // font-weight: 100;
+            line-height: 1;
+            @media (min-width:1200px) {
+                font-size: 12px;
+            }
+            @media (max-width:375px) {
+                font-size:6px;
+            }
+            @media (min-width:376px) and (max-width:440px) {
+                font-size: 8px;
+            }
+            @media (min-width:440px) and (max-width:992px) {
+                font-size: 10px;
+            }
+        }
+
+    }
+
+    .worksWithOctopusImg {
+        width: auto;
+        height: 2.3vw;
+        @media (max-width: 992px) {
+            display: none;    
+        }
+    }
+    .circleTickImg {
+        width: auto;
+        height: 0.6vw;
+        margin: 0.1vw 0.4vw 0.2vw 0;
+
+        @media (max-width: 992px) {
+            height: 2.4vw;
+            margin: 0.3vw 1.2vw 0.6vw 0;
+        }
+    }
+    .squareTickImg {
+        width: auto;
+        height: 0.7vw;
+        margin: 0.1vw 0.4vw 0.2vw 0;
+        @media (max-width: 992px) {
+            height: 2.8vw;
+            margin: 0.4vw 1.2vw 0.8vw 0;
+        }
+    }
+    .descriptionText01 {
+        font-size: 12px;
+        @media (min-width:1200px) {
+            font-size: 14px;
+        }
+        @media  (min-width:375px) and  (max-width: 460px) {
+            font-size: 12px;
+  
+        }
+        @media (min-width:460px) and (max-width:576px) {
+            font-size: 14px;
+        }
+        @media (min-width:577px) and (max-width:662px) {
+            font-size: 16px;
+        }
+        @media (min-width:663px) and (max-width:992px) {
+            font-size: 18px;
+        }
+        @media (max-width:375px) {
+            font-size: 8px;
+        }
+    }
+    .listHeader {
+        font-size: 12px;
+        font-weight: 900;
+        margin-top: 8px ;
+        @media (min-width:1200px) {
+        font-size: 14px;
+            
+        }
+        @media (min-width:376px) and (max-width:460px) {
+            font-size: 14px;
+            
+        }
+        @media (min-width:460px) and (max-width:576px) {
+            font-size: 16px;
+        }
+        @media (min-width:577px) and (max-width:662px) {
+            font-size: 18px;
+        }
+        @media (min-width:663px) and (max-width:992px) {
+            font-size: 20px;
+        }
+        @media (max-width: 375px) {
+            font-size: 12px;
+        }
+    }
+    .listStyles {
+        font-size: 12px;
+        padding-left: 0px;
+        margin-left: calc(0.5vw + 6px);
+        margin-bottom: 0.6vw;
+        @media (min-width:1200px) {
+            font-size: 14px;
+        }
+        @media (min-width:376px)  and (max-width: 460px) {
+            font-size: 12px;
+
+            margin-left: calc(1.2vw + 8px);
+            margin-bottom: 2vw;
+        }
+        @media (min-width:460px) and (max-width:576px) {
+            font-size: 14px;
+        }
+        @media (min-width:577px) and (max-width:662px) {
+            font-size: 16px;
+        }
+        @media (min-width:663px) and (max-width:992px) {
+            font-size: 18px;
+        }
+        @media (max-width:375px) {
+            font-size: 8px;
+            margin-left: calc(1.2vw + 8px);
+            margin-bottom: 2vw;
+        }
+    }
+    .rightsideCardHeaders {
+        font-size: 12px;
+        font-weight: 900;
+        margin-top: 8px ;
+        @media (min-width:1200px) {
+        font-size: 14px;
+            
+        }
+        @media (max-width: 375px) {
+            font-size: 3.4vw;
+        }
+
+        @media (min-width:376px) and (max-width:460px) {
+            font-size: 14px;
+            
+        }
+        @media (min-width:460px) and (max-width:576px) {
+            font-size: 16px;
+        }
+        @media (min-width:577px) and (max-width:662px) {
+            font-size: 18px;
+        }
+        @media (min-width:663px) and (max-width:992px) {
+            font-size: 20px;
+        }
+    }
+    .rightsideCardProductDiv {
+        display: flex;
+        // background-color: #fff;
+        justify-content: center;
+        align-items: center;
+       height: 40px;
+       width: 40px;
+        border-radius: 0.25vw;
+        @media (min-width:1200px) {
+            height: 50px;
+       width: 50px;
+       padding: 2px;
+       max-height: 50px;
+       max-width: 50px;
+        }
+        
+        @media (max-width: 375px) {
+            width:  7vw;
+            height: 7vw;
+            margin: 1vw 2vw 1vw 1vw;
+            border-radius: 1vw;
+        }
+        @media (min-width: 376px) and (max-width: 992px) {
+            width:  40px;
+            height: 40px;
+            img{
+                padding:  3px;
+                
+            }
+            border-radius: 4px;
+        }
+        .productInfoDiv{
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+    }
+    // .rightsideCardProductImg {
+    //     // display: flex;
+    //     // justify-content: center;
+    //     // align-items: center;
+        
+    //     // object-fit: contain;
+    //     // aspect-ratio: auto;
+
+    //     // width: fill;
+    //     // height: fill;
+
+    //     // padding: 0.1vw;
+    // }
+    .padding04 {
+        padding: 0.1rem;
+    }
+    .marginLeft1 {
+        margin-left: calc(0.5vw + 6px);
+    }
+    .hFill {
+        // height: fill;
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+        // max-height: 45px;
+        margin: auto;
+    }
+    .wFill {
+        // width: fill;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        margin: auto;
+    }
+    .bookCallBackForFreeSurvey {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        color: #fff;
+        font-size: 1vw;
+        font-weight: 900;
+        line-height: 1.7;
+        background-color: #00d162;
+        border-radius: 0.3vw;
+        padding-inline: 5vw;
+        cursor: pointer;
+        // margin-block: 1vw;
+        @media (max-width: 992px) {
+            width: 100%;
+            text-align: center;
+            font-size: 3.3vw;
+            border-radius: 1vw;
+        }
+    }
+    .squareTickWithTextSection {
+        // styles.font06} ${styles.gap2} ${styles.fw600} d-flex text-black`}>
+        color: #000;
+        font-size: 0.6vw;
+        font-weight: 600;
+        gap: 4px;
+        display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    // grid-auto-rows: auto;
+    width: 50%;
+    max-width: 570px;
+        @media (min-width:663px) and (max-width:992px) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+            
+        }
+        @media (max-width: 662px) {
+            font-size: 2.2vw;    
+            width: 100%;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 10px;
+        padding: 10px;
+
+        }
+
+        .mobileW100 {
+            grid-column:  span 1 / span 1;
+                font-size: 10px;
+                font-weight: 700;
+                color: #666;
+                @media (min-width:1200px) {
+                    font-size: 10px;
+                }
+                @media (max-width: 662px) {
+                    font-size: 10px;
+                }
+                @media (min-width:663px) and (max-width:992px) {
+                    font-size: 12px;
+                    
+                }
+            
+        }
+    }
+
+    .desktopFlex1 {
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        max-width: 400px;
+        column-gap: 20px;
+        row-gap: 10px;
+      @media (min-width:1200px) {
+        max-width: 500px;
+        
+      }
+        @media (max-width: 992px) {
+            width:  100%;
+            max-width:none;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+
+            gap: 10px;
+        }
+    }
+
+    .desktopFlex2 {
+        display: flex;
+        // flex-direction: column;
+        gap: 0.5vw;
+        @media (max-width: 992px) {
+            gap: 2vw;
+        }
+    }
+
+    .desktopgrid3{
+        display: grid;
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        max-width: 600px;
+        column-gap: 20px;
+        row-gap: 10px;
+
+        @media (min-width:1200px) {
+            max-width: 700px;
+            
+        }
+
+        @media (max-width:992px) {
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        row-gap: 10px;
+
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    .gridPdf{   
+        display: grid;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        max-width: 300px;
+        row-gap:10px;
+        @media (max-width:992px) {
+            max-width: none;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        row-gap: 10px;
+
+        }
+    }
+
+    .rightsideCard1 {
+        display: flex;
+        align-items: center;
+        border-radius: 0.4vw;
+        min-width: 140px;
+        gap: 10px;
+     padding: 4px 4px;
+        @media (max-width: 992px) {
+            width: 100%;    
+            border-radius: 1vw;
+        }
+
+        .text1 {
+            font-size: 10px;
+            font-weight: 900;
+            line-height: 1.1;
+
+            @media (min-width:1200px) {
+                font-size: 12px;
+            }
+            @media (max-width:375px) {
+                font-size: 2vw;
+                line-height: 1.5;
+            }  
+
+            @media (min-width:376px) and (max-width: 460px) {
+                font-size: 10px;
+                
+            }  
+
+            @media (min-width:460px) and (max-width: 576px) {
+                font-size: 10px;
+                
+            }
+
+            @media (min-width:577px) and (max-width: 662px) {
+                font-size: 12px;
+                
+            }
+
+            @media (min-width:663px) and (max-width: 992px) {
+                font-size: 14px;
+                
+            }
+
+
+
+        }
+        .text2 {
+            font-size: 8px;
+            color: #666;
+            line-height: 1.5;
+            @media (min-width:1200px) {
+                font-size: 10px;
+            }
+            @media (max-width:375px) {
+                font-size: 1.8vw;
+            }  
+            @media (min-width:376px) and (max-width: 460px) {
+                font-size: 8px;
+                
+            }  
+
+            @media (min-width:460px) and (max-width: 576px) {
+                font-size: 8px;
+                
+            }
+
+            @media (min-width:577px) and (max-width: 662px) {
+                font-size: 10px;
+                
+            }
+
+            @media (min-width:663px) and (max-width: 992px) {
+                font-size: 12px;
+                
+            }
+        }
+
+
+    }
+    .rightsideCard2 {
+        display: flex;
+        align-items: center;
+        border-radius: 0.4vw;
+        padding: 2px 10px;
+
+        gap: 10px;
+        cursor: pointer;
+        @media (max-width: 992px) {
+            width: 100%;    
+            border-radius: 1vw;
+        }
+
+        .text1 {
+            font-size: 10px;
+            font-weight: 900;
+            line-height: 1.1;
+
+            @media (min-width:1200px) {
+                font-size: 12px;
+            }
+            @media (max-width:375px) {
+                font-size: 2vw;
+                line-height: 1.5;
+            }  
+
+            @media (min-width:376px) and (max-width: 460px) {
+                font-size: 10px;
+                
+            }  
+
+            @media (min-width:460px) and (max-width: 576px) {
+                font-size: 10px;
+                
+            }
+
+            @media (min-width:577px) and (max-width: 662px) {
+                font-size: 12px;
+                
+            }
+
+            @media (min-width:663px) and (max-width: 992px) {
+                font-size: 14px;
+                
+            }
+
+
+
+        }
+        .text2 {
+            font-size: 8px;
+            color: #666;
+            line-height: 1.5;
+            @media (min-width:1200px) {
+                font-size: 10px;
+            }
+            @media (max-width:375px) {
+                font-size: 1.8vw;
+            }  
+            @media (min-width:376px) and (max-width: 460px) {
+                font-size: 8px;
+                
+            }  
+
+            @media (min-width:460px) and (max-width: 576px) {
+                font-size: 8px;
+                
+            }
+
+            @media (min-width:577px) and (max-width: 662px) {
+                font-size: 10px;
+                
+            }
+
+            @media (min-width:663px) and (max-width: 992px) {
+                font-size: 12px;
+                
+            }
+        }
+    }
+
+    .rightsideCard1ForBattery {
+        display: flex;
+        align-items: center;
+        border-radius: 0.4vw;
+        // min-width: 140px;
+        width: 285px;
+        gap: 10px;
+     padding: 4px 4px;
+        @media (max-width: 992px) {
+            width: 100%;    
+            border-radius: 1vw;
+        }
+
+        .text1 {
+            font-size: 10px;
+            font-weight: 900;
+            line-height: 1.1;
+
+            @media (min-width:1200px) {
+                font-size: 12px;
+            }
+            @media (max-width:375px) {
+                font-size: 2vw;
+                line-height: 1.5;
+            }  
+
+            @media (min-width:376px) and (max-width: 460px) {
+                font-size: 10px;
+                
+            }  
+
+            @media (min-width:460px) and (max-width: 576px) {
+                font-size: 10px;
+                
+            }
+
+            @media (min-width:577px) and (max-width: 662px) {
+                font-size: 12px;
+                
+            }
+
+            @media (min-width:663px) and (max-width: 992px) {
+                font-size: 14px;
+                
+            }
+
+
+
+        }
+        .text2 {
+            font-size: 8px;
+            color: #666;
+            line-height: 1.5;
+            @media (min-width:1200px) {
+                font-size: 10px;
+            }
+            @media (max-width:375px) {
+                font-size: 1.8vw;
+            }  
+            @media (min-width:376px) and (max-width: 460px) {
+                font-size: 8px;
+                
+            }  
+
+            @media (min-width:460px) and (max-width: 576px) {
+                font-size: 8px;
+                
+            }
+
+            @media (min-width:577px) and (max-width: 662px) {
+                font-size: 10px;
+                
+            }
+
+            @media (min-width:663px) and (max-width: 992px) {
+                font-size: 12px;
+                
+            }
+        }
+
+
+    }
+
+    .desktopFlex1ForBattery {
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        max-width: 400px;
+        column-gap: 20px;
+        row-gap: 10px;
+
+        @media (min-width:1200px) {
+            max-width: 600px;
+            
+        }
+
+        @media (max-width: 992px) {
+            width:  100%;
+            max-width:none;
+            grid-template-columns: repeat(1,minmax(0,1fr));
+            gap: 10px;
+        }
+    }
+
+    .desktopgrid2ForBattery{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        max-width: 600px;
+        column-gap: 20px;
+        row-gap: 10px;
+
+        @media (min-width:1200px) {
+            max-width: 600px;
+            
+        }
+
+        @media (max-width:992px) {
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        row-gap: 10px;
+
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    .gridPdfForBattery{   
+        display: grid;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        max-width: 600px;
+        row-gap:10px;
+        @media (max-width:992px) {
+            max-width: none;
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        row-gap: 10px;
+
+        }
+    }
+}

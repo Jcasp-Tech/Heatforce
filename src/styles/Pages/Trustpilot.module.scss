@@ -1,0 +1,229 @@
+.award .container-fluid .container {
+  left: -3em !important;
+}
+
+.award .container-fluids .splide__pagination {
+  margin-bottom: -1em !important;
+  margin-bottom: -4em !important;
+}
+
+.trustpilot-parent-div {
+  width: 75%;
+
+  @media (max-width: 992px) {
+    width: 69%;
+  }
+
+  .splide__arrow--prev {
+    left: -2em !important;
+  }
+  .splide__arrow--next {
+    right: -2em !important;
+  }
+}
+
+.testimonial-inner {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  margin-top: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.trustpilot-review-div {
+  height: 230px;
+  width: 100%;
+}
+
+.splider-class-mine .splide__pagination {
+  display: none !important;
+  .splide__arrow--prev-mine {
+    left: -2em;
+  }
+}
+
+.trustSlider {
+  background-color: white;
+}
+
+.reviewDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 90%;
+  padding-left: 10px;
+  width: 100%;
+  gap: 2px;
+  padding-right: 15px;
+  text-align: start;
+}
+
+.reviewHeader {
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.reviewSubDiv1 {
+  max-width: 216px;
+}
+
+.reviewSubDiv1 .star_5 .first .tp-star__canvas,
+.reviewSubDiv1 .star_5 .second .tp-star__canvas,
+.reviewSubDiv1 .star_5 .third .tp-star__canvas,
+.reviewSubDiv1 .star_5 .fourth .tp-star__canvas,
+.reviewSubDiv1 .star_5 .fifth .tp-star__canvas,
+.reviewSubDiv1 .star_5 .first .tp-star__canvas--half,
+.reviewSubDiv1 .star_5 .second .tp-star__canvas--half,
+.reviewSubDiv1 .star_5 .third .tp-star__canvas--half,
+.reviewSubDiv1 .star_5 .fourth .tp-star__canvas--half {
+  fill: #00b67a !important;
+}
+
+.reviewSubDiv1 .star_4 .first .tp-star__canvas,
+.reviewSubDiv1 .star_4 .second .tp-star__canvas,
+.reviewSubDiv1 .star_4 .third .tp-star__canvas,
+.reviewSubDiv1 .star_4 .fourth .tp-star__canvas,
+.reviewSubDiv1 .star_4 .first .tp-star__canvas--half,
+.reviewSubDiv1 .star_4 .second .tp-star__canvas--half,
+.reviewSubDiv1 .star_4 .third .tp-star__canvas--half,
+.reviewSubDiv1 .star_4 .fourth .tp-star__canvas--half {
+  fill: #73cf11 !important;
+}
+
+.reviewSubDiv1 .star_4 .fifth .tp-star__canvas,
+.reviewSubDiv1 .star_4 .fifth .tp-star__canvas--half {
+  fill: #dcdce6 !important;
+}
+
+.reviewStar {
+  max-height: 22px;
+}
+
+.two-line-text-ellipsis {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  -webkit-line-clamp: 2 !important;
+  white-space: normal !important;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+}
+
+.date-and-user-info-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3% 0px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.name {
+  font-weight: 700;
+  font-size: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.date {
+  -ms-flex-negative: 0;
+  font-size: 80%;
+  flex-shrink: 0;
+  margin-left: 2%;
+}
+
+.excellent_content {
+  height: 100%;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: start;
+  margin-top: 0%;
+}
+
+.trustpilotbox-custom .trustbox-header {
+  font-weight: 700;
+  font-size: 124%;
+  text-decoration: none;
+  color: #000;
+}
+
+.trustpilotbox-custom .trustbox-stars {
+  width: 140px;
+  max-width: 162px;
+}
+
+.trustpilotbox-custom .trustbox-totalratings {
+  font-size: 68%;
+  line-height: 1;
+  margin: 7% 0%;
+  color: #191919;
+}
+
+.trustpilotbox-custom .trustbox-logo {
+  width: 41%;
+}
+
+.trustpilot-div {
+  background-color: #ffffff;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  z-index: 1;
+  position: relative;
+
+  .inner-div {
+    display: flex;
+    height: 40px;
+    min-width: 800px;
+    background: none;
+    padding: 7.8px;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      height: 200px;
+      // width: 50px;
+      min-width: 80%;
+      background-color: hsl(100%, 100%, 100%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: fit-content;
+    margin: 2% 0;
+    flex-direction: column;
+  }
+}
+
+.trustbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .trustbox-header {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    padding-inline: 2%;
+  }
+
+  .trustbox-text {
+    gap: "5px";
+    padding-left: "5px";
+    font-weight: 400;
+    padding-inline-start: 1%;
+    text-align: center;
+  }
+}

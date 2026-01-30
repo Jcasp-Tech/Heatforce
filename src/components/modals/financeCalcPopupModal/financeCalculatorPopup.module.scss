@@ -1,0 +1,236 @@
+.financeCalculatorPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(16px);
+    z-index: 15;
+
+    input {
+        border: 0px;
+        border-radius: 8px;
+        // padding: 8px 24px;
+        width: 100%;
+        @media (max-width: 576px) {
+            // padding: 6px 20px;
+        }
+    }
+
+    label {
+        letter-spacing: 1px;
+    }   
+    
+
+    .transparentContainer {
+        width: 100vw;
+        height: 100dvh;
+        display: flex;
+        justify-content: end;
+        align-items: start;
+    }
+    
+    .dialogBox {
+        overflow: auto;
+        background-color: rgba(15, 59, 89, 0.05); 
+        // max-width: 580px;
+        // width: 45vw;
+        width: 600px;
+        height: 100dvh;
+        // border: 2px solid #0A1E34;
+        border-width: 4px 0 4px 4px;
+        border-style: solid;
+        border-color: #0A1E34;
+        border-radius: 32px 0 0 32px;
+        // @media (max-width: 992px) {
+        //     width: 65vw;
+        // }
+        @media (max-width: 768px) {
+            width: 100vw;
+            border-width: 0px;
+            border-radius: 0px;
+        }
+
+    }
+    
+    .closeButton {
+        display: flex;
+        margin-left: auto;
+        margin-top: 12px;
+        margin-right: 12px;
+        color: #fff;
+        background-color: #0A1E34;
+        color: #fff;
+        width: fit-content;
+        border-radius: 10px;
+        cursor: pointer;
+        @media (max-width: 576px) {
+            border-radius: 8px;
+        }
+        svg {
+            height: 28px;
+            width: 28px;
+            @media (max-width: 576px) {
+                height: 24px;
+                width: 24px;
+            }
+        }
+    }
+    
+    .contentSection {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 44px 36px;
+        
+        @media (max-width: 576px) {
+            margin: 34px 28px;
+            gap: 12px;
+        }
+    }
+
+    .finance {
+        color: #000;
+        // font-size: 43px;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 1px;
+        @media (max-width: 576px) {
+            font-size: 28px;
+        }
+    }
+
+    .userValue {
+        width: 80px;
+        border: 0px;
+        outline: 0px;
+        background-color: transparent;
+
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-underline-offset: 8px;
+    }
+    
+    .radioInputContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .radioInputCard {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: #fff;
+            padding: 8px;
+            border-radius: 8px;
+            @media (max-width: 576px) {
+                padding: 4px;
+            }
+
+            .perMonthsInfo {
+                margin: 0px;
+                color: #000;
+                font-size: 20px;
+                font-weight: 700;
+                @media (max-width: 576px) {
+                    font-size: 16px;
+                }
+            }
+            
+            .percentageInfo {
+                background-color: rgba(15, 59, 89, 0.3);
+                font-size: 20px;
+                font-weight: 700;
+                padding-inline: 16px;
+                margin: 8px;
+                border-radius: 8px;
+                @media (max-width: 576px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .financialTermsAndValues {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #dfe1e3;
+        padding-block: 12px;
+
+        .financialTerms {
+            font-size: 20px;
+            font-weight: 700;
+            color: #666;
+            @media (max-width: 576px) {
+                font-size: 16px;
+            }
+        }
+
+        .values {
+            font-size: 24px;
+            font-weight: 900;
+            color: #000;
+            @media (max-width: 576px) {
+                font-size: 20px;
+            }
+        }
+
+    }
+    
+    .representativeText {
+        color: #666;
+        // font-size: 18px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: 0.5px;
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+
+    .depositAmountText {
+        color: #666;
+        // font-size: 18px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+
+    .depositAmountNumber {
+        color: #000;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: 0.5px;
+
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+
+    .disclaimerText {
+        padding-block: 8px;
+        color: #666;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+        @media (max-width: 576px) {
+            font-size: 11px;
+        }
+    }
+}
