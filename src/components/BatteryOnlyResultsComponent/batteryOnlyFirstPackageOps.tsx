@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import Image from 'next/image';
 import { Toaster } from 'react-hot-toast';
 import SummaryDisplayMap from '../gooleMap/summaryDisplayMap';
 
