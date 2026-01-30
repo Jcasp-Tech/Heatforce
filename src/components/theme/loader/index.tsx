@@ -98,7 +98,7 @@ useGSAP(()=>{
             >
               <Image height={80} width={80}
                 className="loader_img"
-                src="/images/LOADER_GREY.webp"
+                src="/images/flame.svg"
                 alt="loader"
               />
             </div>
@@ -110,7 +110,7 @@ useGSAP(()=>{
                 paddingLeft: '10px',
               }}
             >
-              <Image height={80} width={80} className="loader_done_img" src="/images/LOADER_BLUE.webp" alt="done" />
+              <Image height={80} width={80} className="loader_done_img" src="/images/flame.svg" alt="done" />
             </div>
           )}
           <div style={{ marginRight:'auto' }}>
@@ -128,7 +128,7 @@ useGSAP(()=>{
             >
               <Image height={80} width={80}
                 className="loader_img"
-                src="/images/LOADER_GREY.webp"
+                src="/images/flame.svg"
                 alt="loader"
               />
             </div>
@@ -140,7 +140,7 @@ useGSAP(()=>{
                 paddingLeft: '10px',
               }}
             >
-              <Image height={80} width={80} className="loader_done_img" src="/images/LOADER_BLUE.webp" alt="done"/>
+              <Image height={80} width={80} className="loader_done_img" src="/images/flame.svg" alt="done"/>
             </div>
           )}
           <div style={{ marginRight:'auto' }}>
@@ -158,7 +158,7 @@ useGSAP(()=>{
             >
               <Image height={80} width={80}
                 className="loader_img"
-                src="/images/LOADER_GREY.webp"
+                src="/images/flame.svg"
                 alt="loader"
               />
             </div>
@@ -170,7 +170,7 @@ useGSAP(()=>{
                 paddingLeft: '10px',
               }}
             >
-              <Image height={80} width={80} className="loader_done_img" src="/images/LOADER_BLUE.webp" alt="done" />
+              <Image height={80} width={80} className="loader_done_img" src="/images/flame.svg" alt="done" />
             </div>
           )}
           <div style={{ marginRight:'auto' }}>

@@ -58,7 +58,7 @@ const GetYourEstimateButton = ({ allQuestionsData, allRoofs, AllRoof, setValidat
         tmpAllQuestionData.roof_space = tmpAllQuestionData.web_lead_type === 2 ? 1 : tmpAllQuestionData.roof_space
         tmpAllQuestionData.solar_system_size = !tmpAllQuestionData.solar_system_size ? 0 : tmpAllQuestionData.solar_system_size
         const res = await saveQuoteWebLeadDataAPI(tmpAllQuestionData);
-        cacheImage(['/images/LOADER_BLUE.webp', '/images/LOADER_GREY.webp'])
+        cacheImage(['/images/flame.svg', '/images/LOADER_GREY.webp'])
 
         try {
           if (res) {
@@ -122,7 +122,7 @@ const GetYourEstimateButton = ({ allQuestionsData, allRoofs, AllRoof, setValidat
     console.log(res, "cached images")
   }
   useEffect(() => {
-    cacheImage(['/images/LOADER_BLUE.webp', '/images/LOADER_GREY.webp'])
+    cacheImage(['/images/flame.svg', '/images/LOADER_GREY.webp'])
   }, [])
   return (
     <div className=" d-flex align-items-center mt-3">

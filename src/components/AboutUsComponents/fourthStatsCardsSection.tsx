@@ -10,11 +10,11 @@ const AboutUsFourthStatsCardsSection = () => {
                 <div className="d-flex justify-content-center">
                     <div className={`${dFlexJustifyAlign} ${styles.cardDesktop} ${styles.cardMargins} ${styles.cardShadow}`}>
                         <Image quality={100} 
-                            src="/images/pages/about-us/solar-car.png"
+                            src="/images/pages/about-us/SmallVan.jpg"
                             alt="solar-car"
                             className={`${styles.solarCar} w-100`}
                             width={999}
-                            height={-1}
+                            height={2}
                             loading="lazy"
                         />
                         <AnimatedText>

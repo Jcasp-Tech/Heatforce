@@ -38,11 +38,20 @@
 
     input {
         outline: none;
-        border: 0px;
+        border: 1px solid #0A1E34;
         border-radius: 8px;
         // padding: 8px 24px;
         padding: 16px 24px;
         width: 100%;
+        background-color: #ffffff;
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+
+        &:focus {
+            border-color: #ffffff;
+            background-color: #ffffff;
+            outline: 2px solid #0A1E34;
+            outline-offset: -2px;
+        }
 
         @media (max-width: 1024px) {
             padding: 10px 20px;
@@ -108,7 +117,7 @@
     }
 
     .dialogBox {
-        background-color: rgba(15, 59, 89, 0.05);
+        background-color: #ffffff;
         // width: 25vw;
         max-width: 580px;
         // max-height: 650px;
@@ -193,7 +202,7 @@
     }
 
     .descriptionText1 {
-        color: #666;
+        color: #000;
         font-size: 18px;
         // font-size: 16px;
         font-weight: 600;
@@ -240,7 +249,7 @@
     }
 
     .descriptionText3 {
-        color: #666;
+        color: #000;
         // font-size: 9px;
         font-size: 12px;
         font-weight: 600;

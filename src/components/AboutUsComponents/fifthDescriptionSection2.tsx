@@ -2,7 +2,7 @@ import styles from "../../styles/Pages/about-us/FifthDescriptionSection2.module.
 import AnimatedHeading from "../theme/effects/AnimatedHeading";
 
 const FifthDescriptionSection2 = () => {
-    const descriptionText = `At CES Solar Shop, we believe in providing top-tier products and services that you can trust. We are accredited and certified by leading industry bodies, ensuring that every installation meets the highest standards of quality and safety. Our accreditations include MCS, NIC EIC, and NAPIT among many others. If there's a certification to be had, we've got it.`
+    const descriptionText = `Heatforce provide comprehensive renewable energy solutions, alongside more traditional plumbing, heating and electrical work to homeowners. We also partner with local authorities, housing associations, charities, and utility companies.`
 
     return (
         <div className={`${styles.FifthDescriptionSection2}`}>

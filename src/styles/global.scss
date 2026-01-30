@@ -4605,12 +4605,22 @@ a[href^="https://maps.google.com/maps"] {
 }
 
 .loader_img {
-  animation: App-logo-spin infinite 1s linear;
+  /* SVG has its own animation, but we can add subtle movement */
+  animation: flame-glow 1s ease-in-out infinite;
 }
 
-/* Brand-colored "done" state: tint loader image to primary #0A1E34 */
+@keyframes flame-glow {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+/* Flame icon - no filter needed, keep original colors */
 .loader_done_img {
-  filter: brightness(0) saturate(100%) invert(12%) sepia(42%) saturate(1200%) hue-rotate(195deg) brightness(95%) contrast(101%);
+  /* No filter - keep flame's natural orange/red colors */
 }
 
 @keyframes App-logo-spin {
@@ -4916,25 +4926,51 @@ a[href^="https://maps.google.com/maps"] {
 
         .jiffyImageDiv {
           position: absolute;
-          bottom: 0;
+          bottom: 20px;
           left: 50%;
           transform: translateX(-50%);
-          width: 100%;
-          height: 40%;
+          width: 200px;
+          height: 200px;
           display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #0A1E34;
+          border-radius: 50%;
+          animation: floatPulse 3s ease-in-out infinite;
+          overflow: hidden;
 
           @media (max-width: 992px) {
             position: relative;
             flex-grow: 1;
             max-height: 300px;
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            animation: none;
           }
 
           img {
             width: 60%;
-            height: 100%;
+            height: 60%;
             object-fit: contain;
             filter: drop-shadow(0px 0px 6px black);
-            object-position: bottom;
+            object-position: center;
+            margin: 0 auto;
+          }
+        }
+
+        @keyframes floatPulse {
+          0%, 100% {
+            transform: translateX(-50%) translateY(0) scale(1);
+          }
+          25% {
+            transform: translateX(-50%) translateY(-10px) scale(1.03);
+          }
+          50% {
+            transform: translateX(-50%) translateY(0) scale(1.05);
+          }
+          75% {
+            transform: translateX(-50%) translateY(-10px) scale(1.03);
           }
         }
       }
@@ -6569,10 +6605,84 @@ a[href^="https://maps.google.com/maps"] {
 
 .comboCheckList1 {
   display: block;
-  color: $secondary-color;
+  color: #000;
 
   li {
-    color: $secondary-color !important;
+    color: #000 !important;
+  }
+}
+
+// Option One (section1) - White color
+.resultContainer .section1 .checkList.comboCheckList1 {
+  color: #fff !important;
+
+  li {
+    color: #fff !important;
+  }
+
+  // Ensure section1 li elements are not affected by section2 styles
+  li:nth-child(2) {
+    color: #fff !important;
+  }
+}
+
+// Additional specific rule for section1 comboCheckList1
+.resultContainer .section1 .comboCheckList1 {
+  color: #fff !important;
+
+  li {
+    color: #fff !important;
+  }
+
+  li:nth-child(2) {
+    color: #fff !important;
+  }
+}
+
+// Option Two (section2) - Black color
+.resultContainer .section2 .checkList.comboCheckList1 {
+  color: #000 !important;
+
+  li {
+    color: #000 !important;
+
+    span img {
+      filter: brightness(0) saturate(100%);
+    }
+  }
+
+  // Target the first li element (index 0) in section2 - ensure it's black
+  li:first-child,
+  li:nth-child(1) {
+    color: #000 !important;
+  }
+
+  // Target only the second li element (index 1) in section2 - ensure it's black
+  li:nth-child(2) {
+    color: #000 !important;
+  }
+}
+
+// Additional specific rule to ensure section2 comboCheckList1 is black
+.resultContainer .section2 .comboCheckList1 {
+  color: #000 !important;
+
+  li {
+    color: #000 !important;
+
+    span img {
+      filter: brightness(0) saturate(100%);
+    }
+  }
+
+  // Target the first li element (index 0) in section2 - ensure it's black
+  li:first-child,
+  li:nth-child(1) {
+    color: #000 !important;
+  }
+
+  li:nth-child(2) {
+    color: #000 !important;
   }
 }
 

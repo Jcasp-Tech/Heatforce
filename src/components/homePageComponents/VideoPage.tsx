@@ -37,7 +37,12 @@ const VideoPage = () => {
               <div className="getstartede-button z-0" >
                 {/* <Link href="/survey/">
                 </Link> */}
-                  <div className={`mainButton fw-bold text-black cursor-pointer ${styles.getStartedBtn}`} onClick={() => {router.push(`/survey`);}}><p>Get Started</p></div>
+                  <div className={`mainButton fw-bold text-black cursor-pointer ${styles.getStartedBtn}`} onClick={() => {router.push(`/survey`);}}>
+                    <div
+                      className={styles.getStartedBtnShadow}
+                    ></div>
+                    <p>Get Started</p>
+                  </div>
               </div>
             </div>
         </div>

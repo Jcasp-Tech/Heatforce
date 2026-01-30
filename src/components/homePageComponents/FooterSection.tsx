@@ -249,7 +249,7 @@ const FooterSection = () => {
                   <li className="list-group-item py-2 fw-bold" style={{ paddingTop: '0px !important' }} >
                     <AnimatedText>
                       <p className="addrs-ftr text-dark mb-1" style={{ marginBottom: '0px', fontWeight: 'bold' }}>
-                        Our Locations
+                        Our Location
                       </p>
                       <p className="addrs-ftr text-dark" style={{ marginBottom: '0px' }}>
                         Unit 10, Lambourne Crescent<br />

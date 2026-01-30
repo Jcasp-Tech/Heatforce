@@ -11,7 +11,7 @@ const NinthThanksForChoosingSolarShopSection = () => {
                     <div className={`${styles.thankYouDialogBox}`}>
                         <AnimatedHeading>
                             <div className={`${styles.text1}`}>Thank you for choosing</div>
-                            <div className={`${styles.text2}`}>CES Solar Shop</div>
+                            <div className={`${styles.text2}`}>Heatforce</div>
                             <div className={`${styles.text3}`}>Your journey to a greener, more energy-efficient future starts here.</div>
                         </AnimatedHeading>
                         <AnimatedHeading>

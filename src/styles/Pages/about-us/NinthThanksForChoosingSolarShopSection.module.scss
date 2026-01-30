@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .NinthThanksForChoosingSolarShopSection {
     @media (max-width: 768px) {
         display: none;
@@ -121,7 +123,8 @@
           transform: translateY(-100%);
         }
       
-        color: #000;
+        color: $primary-bg-text-color;
+        background-color: $primary-color;
       }
       
       .learnmorebtnshadow {

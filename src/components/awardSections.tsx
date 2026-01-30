@@ -22,6 +22,7 @@ const AwardSection = () => {
                 options={{
                   perPage: 4,
                   pagination: false,
+                  gap: '1rem',
                   breakpoints: {
                     768: {
                       perPage: 1,
@@ -35,204 +36,121 @@ const AwardSection = () => {
                   },
                 }}
                 aria-label="My Favorite Images"
-              // style={{maxHeight: "33px"}}
               >
 
                 <SplideSlide>
                   <div
-                    className="award-1 col-12 my-2 px-4"
-                    style={{ height: '100%' }}
+                    className="award-1 col-12 my-2 px-4 d-flex align-items-center justify-content-center"
+                    style={{ height: '100%', minHeight: '100px' }}
                   >
                     <Image quality={100}
-                      height={65}
+                      height={100}
                       width={250}
-                      src="/images/awardsSection/large-project-year-award.webp"
+                      src="/images/awardsSection/boilerheating_winner-300x211.png"
                       alt=""
-                      // style={{ height: '108px' }}
                       className="img-fluid"
+                      style={{ objectFit: 'contain', maxHeight: '100px' }}
                       loading="lazy"
                       fetchPriority="low"
                     />
                   </div>
                 </SplideSlide>
                 <SplideSlide>
-                  <div className="award-1 col-12 my-2 px-4">
+                  <div className="award-1 col-12 my-2 px-4 d-flex align-items-center justify-content-center" style={{ height: '100%', minHeight: '100px' }}>
                     <Image quality={100}
-                      height={65}
+                      height={100}
                       width={250}
-                      src="/images/awardsSection/large-scale-project-award.webp"
+                      src="/images/awardsSection/EPVS-Logo-300x119.webp"
                       alt=""
-                      // style={{ height: '108px' }}
                       className="img-fluid"
+                      style={{ objectFit: 'contain', maxHeight: '100px' }}
                       loading="lazy"
                       fetchPriority="low"
                     />
                   </div>
                 </SplideSlide>
                 <SplideSlide>
-                  <div className="award-1 col-12 my-2 px-4">
+                  <div className="award-1 col-12 my-2 px-4 d-flex align-items-center justify-content-center" style={{ height: '100%', minHeight: '100px' }}>
                     <Image quality={100}
-                      height={65}
+                      height={100}
                       width={250}
-                      src="/images/awardsSection/boiler-award.webp"
+                      src="/images/awardsSection/gas-safe-mini-tiles-1-qrc2jlnwmi6i2wqpemy0aijsv07wd0biysqornzaw8.webp"
                       alt=""
-                      // style={{ height: '108px' }}
                       className="img-fluid"
+                      style={{ objectFit: 'contain', maxHeight: '100px' }}
                       loading="lazy"
                       fetchPriority="low"
                     />
                   </div>
                 </SplideSlide>
                 <SplideSlide>
-                  <div className="award-1 col-12 my-2 px-4">
+                  <div className="award-1 col-12 my-2 px-4 d-flex align-items-center justify-content-center" style={{ height: '100%', minHeight: '100px' }}>
                     <Image quality={100}
-                      height={65}
+                      height={100}
                       width={250}
-                      src="/images/awardsSection/vulnerable-award.webp"
+                      src="/images/awardsSection/greenDeal_1.webp"
                       alt=""
-                      // style={{ height: '108px' }}
                       className="img-fluid"
+                      style={{ objectFit: 'contain', maxHeight: '100px' }}
                       loading="lazy"
                       fetchPriority="low"
                     />
                   </div>
                 </SplideSlide>
-                {/* <SplideSlide>
-                  <div className="award-1 col-12 my-2" style={{ height: '100%' }}>
-                    <Image quality={100} 
-                      height={65}
-                      width={250}
-                      src="/images/awardsSection/Awards_Winner_fabric_installer.webp"
-                      alt=""
-                      className="img-fluid"
-                      loading="lazy"
-                      fetchPriority="low"
-                    />
-                  </div>
-                </SplideSlide> */}
-
                 <SplideSlide>
-                  <div
-                    className="d-flex align-items-center"
-                    style={{ width: '50%', margin: 'auto', height: '100%' }}
-                  >
-                    <div className='d-flex align-items-center'>
-                      <Image quality={100}
-                        height={65}
-                        width={250}
-                        src="/images/awardsSection/Awards_Winner_fabric_installer.webp"
-                        alt=""
-                        style={{ width: '100%' }}
-                        className="img-fluidd"
-                        loading="lazy"
-                        fetchPriority="low"
-                      />
-                    </div>
-                  </div>
-                </SplideSlide>
-
-                <SplideSlide>
-                  <div className="award-1 col-12 my-2" style={{ height: '100%' }}>
+                  <div className="award-1 col-12 my-2 px-4 d-flex align-items-center justify-content-center" style={{ height: '100%', minHeight: '100px' }}>
                     <Image quality={100}
-                      height={65}
+                      height={100}
                       width={250}
-                      src="/images/awardsSection/Insulation-Installer-Third-Outline.webp"
+                      src="/images/awardsSection/greenDeal.webp"
                       alt=""
-                      // style={{ height: '100%' }}
                       className="img-fluid"
+                      style={{ objectFit: 'contain', maxHeight: '100px' }}
                       loading="lazy"
                       fetchPriority="low"
                     />
                   </div>
                 </SplideSlide>
                 <SplideSlide>
-                  <div className="award-1 col-12 my-2" style={{ height: '100%' }}>
+                  <div className="award-1 col-12 my-2 px-4 d-flex align-items-center justify-content-center" style={{ height: '100%', minHeight: '100px' }}>
                     <Image quality={100}
-                      height={65}
+                      height={100}
                       width={250}
-                      src="/images/awardsSection/RH-Installer-Outline.webp"
+                      src="/images/awardsSection/hies-accredited-member-r4fnpi4b1snhm8qmq5biqefau44wmv82gjqakqewa0.webp"
                       alt=""
-                      // style={{ height: '100%' }}
                       className="img-fluid"
+                      style={{ objectFit: 'contain', maxHeight: '100px' }}
                       loading="lazy"
                       fetchPriority="low"
                     />
                   </div>
                 </SplideSlide>
-                {/* <SplideSlide>
-                  <div
-                    className="award-1 col-12   my-2"
-                    style={{ height: '100%' }}
-                  >
-                    <Image quality={100} 
-                      height={65}
+                <SplideSlide>
+                  <div className="award-1 col-12 my-2 px-4 d-flex align-items-center justify-content-center" style={{ height: '100%', minHeight: '100px' }}>
+                    <Image quality={100}
+                      height={100}
                       width={250}
-                      src="/images/awardsSection/Winner_renewable_installer.webp"
+                      src="/images/awardsSection/mcs-mini-tiles-1-qrc2jmlqtc7seipc95cmv0b9ge39kpf9axe68xxwq0.webp"
                       alt=""
                       className="img-fluid"
+                      style={{ objectFit: 'contain', maxHeight: '100px' }}
                       loading="lazy"
                       fetchPriority="low"
                     />
                   </div>
-                </SplideSlide> */}
-
-                <SplideSlide>
-                  <div
-                    className="d-flex align-items-center"
-                    style={{ width: '50%', margin: 'auto', height: '100%' }}
-                  >
-                    <div className='d-flex align-items-center'>
-                      <Image quality={100}
-                        height={65}
-                        width={250}
-                        src="/images/awardsSection/Winner_renewable_installer.webp"
-                        alt=""
-                        style={{ width: '100%' }}
-                        className="img-fluidd"
-                        loading="lazy"
-                        fetchPriority="low"
-                      />
-                    </div>
-                  </div>
                 </SplideSlide>
-
                 <SplideSlide>
-                  <div
-                    className="d-flex align-items-center"
-                    style={{ width: '50%', margin: 'auto', height: '100%' }}
-                  >
-                    <div className='d-flex align-items-center'>
-                      <Image quality={100}
-                        height={65}
-                        width={250}
-                        src="/images/awardsSection/energy-efficiency-awards-2024-solar-pv-installer.webp"
-                        alt=""
-                        style={{ width: '100%' }}
-                        className="img-fluidd"
-                        loading="lazy"
-                        fetchPriority="low"
-                      />
-                    </div>
-                  </div>
-                </SplideSlide>
-
-                <SplideSlide>
-                  <div
-                    className="d-flex align-items-center"
-                    style={{ width: '50%', margin: 'auto', height: '100%' }}
-                  >
-                    <div className='d-flex align-items-center'>
-                      <Image quality={100}
-                        height={65}
-                        width={250}
-                        src="/images/awardsSection/energy-efficiency-awards-2024-insulation-fabric-installer.webp"
-                        alt=""
-                        style={{ width: '100%' }}
-                        className="img-fluidd"
-                        loading="lazy"
-                        fetchPriority="low"
-                      />
-                    </div>
+                  <div className="award-1 col-12 my-2 px-4 d-flex align-items-center justify-content-center" style={{ height: '100%', minHeight: '100px' }}>
+                    <Image quality={100}
+                      height={100}
+                      width={250}
+                      src="/images/awardsSection/Rectangle-300x104.png"
+                      alt=""
+                      className="img-fluid"
+                      style={{ objectFit: 'contain', maxHeight: '100px' }}
+                      loading="lazy"
+                      fetchPriority="low"
+                    />
                   </div>
                 </SplideSlide>
 
@@ -242,9 +160,9 @@ const AwardSection = () => {
           {/* <!-- ====Awards End==== --> */}
         </div>
       </AnimatedText>
+      {/* CES Accreditations Section - Commented out for now
       <AnimatedText>
         <div className="container-fluid container-fluids pb-5">
-          {/* <!-- ====Accreditations Start==== --> */}
           <div
             className="award-box pt-3"
             data-aos="fade-out"
@@ -269,7 +187,7 @@ const AwardSection = () => {
                   },
                 }}
                 aria-label="My Favorite Images"
-                className="my-splider" // Add a class name for styling
+                className="my-splider"
               >
                 <SplideSlide>
                   <Image quality={100}
@@ -425,13 +343,12 @@ const AwardSection = () => {
                     loading="lazy"
                   />
                 </SplideSlide>
-
               </Splide>
             </div>
           </div>
-          {/* <!-- ====Accreditations End==== --> */}
         </div>
       </AnimatedText>
+      */}
     </section>
   );
 };

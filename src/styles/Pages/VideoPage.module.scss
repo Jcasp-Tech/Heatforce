@@ -5,14 +5,32 @@
 }
 
 .getStartedBtn {
-  transition: background-color 0.2s ease, color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s ease-in;
+  background-color: #ffffff !important;
 
   &:hover {
-    background-color: #1a1a1a !important;
-    color: #fff !important;
+    .getStartedBtnShadow {
+      transform: translateY(-100%);
+    }
+
+    background-color: #F6E51B !important;
+    color: #000;
 
     p {
-      color: #fff !important;
+      color: #000;
     }
   }
+}
+
+.getStartedBtnShadow {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all;
+  transition-duration: 0.4s;
 }

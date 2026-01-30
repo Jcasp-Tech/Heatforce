@@ -484,7 +484,7 @@ const Save = (props: ResultsProps) => {
                   </div>}
 
                   <div className="  jiffyImageDiv   ">
-                    <Image quality={100} src={'/images/Jiffy.webp'} width={300} height={400} alt='Jiffy' />
+                    <Image quality={100} src={'/images/Heatforce-Logo.png'} width={300} height={400} alt='Heatforce' />
                   </div>
                 </div>
                 <FinalFormDiv quoteData={quoteData} setQuoteData={setQuoteData} codeId={codeId} setLastForm={setLastForm} thankyouPage={thankyouPage} setThankyouPage={setThankyouPage} />
