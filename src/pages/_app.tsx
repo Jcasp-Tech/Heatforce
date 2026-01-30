@@ -17,6 +17,7 @@ import { Router } from 'next/router';
 import { useState } from 'react';
 import { Cookies } from 'react-cookie';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
+import { useMemo } from 'react';
 import { Provider, useStore } from 'react-redux';
 
 import Pixel from '@/components/Pixel';
@@ -29,7 +30,7 @@ import {
   loginUserReset,
   loginUserSuccess,
 } from '@/redux/slices/auth';
-import { wrapper } from '@/redux/store';
+import makeStore, { HYDRATE, wrapper } from '@/redux/store';
 import { API, nextRedirect } from '@/utils/helpers';
 import Intercom from '@intercom/messenger-js-sdk';
 // import Script from 'next/script';
@@ -160,7 +161,7 @@ const MyApp = ({
   );
 };
 
-MyApp.getInitialProps = wrapper.getInitialPageProps(
+const getInitialProps = wrapper.getInitialPageProps(
   (store) => async (appContext: AppContextType | any) => {
     const { ctx } = appContext;
     let appProps: any = {};
@@ -280,5 +281,45 @@ MyApp.getInitialProps = wrapper.getInitialPageProps(
   }
 );
 
+/**
+ * Static-export-safe app wrapper. next-redux-wrapper's withRedux uses useRouter()
+ * which throws during static export (no router mounted). We create the store and
+ * hydrate manually so we never call useRouter during prerender.
+ */
+function AppWrapper(props: any) {
+  const { initialProps, initialState, ...restProps } = props;
 
-export default wrapper.withRedux(MyApp);
+  const store = useMemo(() => makeStore(), []);
+
+  useMemo(() => {
+    if (initialState) {
+      store.dispatch({ type: HYDRATE, payload: initialState });
+    }
+  }, [store, initialState]);
+
+  let combinedProps: any = { ...restProps };
+  if (initialProps?.pageProps) {
+    combinedProps.pageProps = { ...initialProps.pageProps, ...restProps.pageProps };
+  } else if (restProps.pageProps) {
+    combinedProps.pageProps = { ...restProps.pageProps };
+  }
+  if (combinedProps.pageProps?.initialState) {
+    const { initialState: _i, ...pageProps } = combinedProps.pageProps;
+    combinedProps.pageProps = pageProps;
+  }
+  if (combinedProps.pageProps?.initialProps) {
+    combinedProps.pageProps = { ...combinedProps.pageProps, ...combinedProps.pageProps.initialProps };
+    delete combinedProps.pageProps.initialProps;
+  }
+  const mergedProps = { ...initialProps, ...combinedProps };
+
+  return (
+    <Provider store={store}>
+      <MyApp {...mergedProps} />
+    </Provider>
+  );
+}
+
+AppWrapper.getInitialProps = getInitialProps;
+
+export default AppWrapper;

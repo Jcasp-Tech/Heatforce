@@ -4,6 +4,8 @@ import { setupListeners } from '@reduxjs/toolkit/query';
 import type { MakeStore } from 'next-redux-wrapper';
 import { createWrapper, HYDRATE } from 'next-redux-wrapper';
 
+export { HYDRATE };
+
 import type { RootState } from './reducers';
 import rootReducer from './reducers';
 
@@ -35,7 +37,7 @@ const makeStore: MakeStore<Store<RootState>> = () => {
 };
 
 export const wrapper = createWrapper<Store<RootState>>(makeStore, {
-  debug: true,
+  debug: process.env.NODE_ENV === 'development',
 });
 
 export default makeStore;
