@@ -22,7 +22,7 @@
     }
 
     .dialogBox {
-        background-color: rgba(15, 59, 89, 0.05); 
+        background-color: #fff; 
         // width: 25vw;
         max-width: 390px;
         margin-inline: 12px;
@@ -43,6 +43,7 @@
         svg {
             height: 20px;
             width: 20px;
+            fill: #fff;
         }
     }
 
@@ -120,6 +121,15 @@
 
         button,
         .buttonClass {
+            color: #fff;
+        }
+
+        .descriptionText2,
+        .descriptionText4 {
+            color: #fff;
+        }
+
+        a {
             color: #fff;
         }
     }

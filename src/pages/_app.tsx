@@ -81,8 +81,8 @@ const MyApp = ({
       <Head>
         <title>
           {pathNameProps.length > 1
-            ? `${pathNameProps} | CES Solar`
-            : ' CES Solar'}
+            ? `${pathNameProps} | Heatforce`
+            : ' Heatforce'}
         </title>
         <meta
           name="viewport"

@@ -15,6 +15,9 @@
   NEXT_API_ENDPOINT = "https://old.cessolarshop.com/apibackend"
   NEXT_LIVE_ENDPOINT = "https://solarshopphase2.jcasptechnologies.com/"
 
+# Redirects for dynamic routes (handled by _redirects file in public folder)
+# The _redirects file will be copied to the out directory during build
+
 # Note: Sensitive variables should be added via Netlify UI:
 # - PAYLOAD_SECRET_KEY
 # - NEXTAUTH_SECRET

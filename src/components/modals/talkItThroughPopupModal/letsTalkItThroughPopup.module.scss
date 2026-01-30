@@ -12,7 +12,7 @@
     z-index: 1000;
 
     input {
-        border: 0px;
+        border: 1px solid #0A1E34;
         border-radius: 8px;
         padding: 8px 24px;
         width: 100%;
@@ -36,7 +36,7 @@
     }
 
     .dialogBox {
-        background-color: rgba(15, 59, 89, 0.05); 
+        background-color: #fff; 
         // width: 25vw;
         max-width: 580px;
         margin-inline: 12px;

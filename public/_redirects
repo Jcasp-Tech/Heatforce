@@ -1,0 +1,6 @@
+# Netlify redirects for dynamic routes
+# For Next.js static export with trailingSlash: true, routes are exported as directories
+# Rewrite dynamic routes to serve the correct page template
+# The 200 status code means rewrite (not redirect), preserving the URL in the browser
+/quote/results/*  /quote/results/[code]/index.html  200
+/save/*  /save/[code]/index.html  200
