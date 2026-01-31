@@ -19,7 +19,7 @@ module.exports = withBundleAnalyzer({
     NEXT_API_ENDPOINT: process.env.NEXT_API_ENDPOINT,
     PAYLOAD_SECRET_KEY: process.env.PAYLOAD_SECRET_KEY,
     IS_ENABLED_ENCRYPTION: process.env.IS_ENABLED_ENCRYPTION,
-      NEXT_MAINTENANCE_MODE: process.env.NEXT_MAINTENANCE_MODE,
+    NEXT_MAINTENANCE_MODE: process.env.NEXT_MAINTENANCE_MODE || 'off',
   },
   poweredByHeader: false,
   trailingSlash: true,
