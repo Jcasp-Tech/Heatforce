@@ -25,7 +25,13 @@
     "test-storybook:ci": "start-server-and-test serve-storybook http://localhost:6006 test-storybook",
     "prepare": "cd .. && husky install frontend/.husky",
     "postbuild": "next-sitemap",
-    "build:icons": "tsc -b src/iconify-bundle && node src/iconify-bundle/bundle-icons-react.js"
+    "build:icons": "tsc -b src/iconify-bundle && node src/iconify-bundle/bundle-icons-react.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop heatforce-app",
+    "pm2:restart": "pm2 restart heatforce-app",
+    "pm2:delete": "pm2 delete heatforce-app",
+    "pm2:logs": "pm2 logs heatforce-app",
+    "pm2:monit": "pm2 monit"
   },
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
