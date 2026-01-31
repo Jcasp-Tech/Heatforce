@@ -48,8 +48,9 @@ const Result = ({ codeId: codeIdProp }: ResultsProps) => {
       setApiQuoteLoading(true);
       setError(null);
 
+      const params = { ...apiParam, randomString: _id };
+      
       try {
-        const params = { ...apiParam, randomString: _id };
         const res = await getWebLeadResultsDataAPI(params);
         
         if (!res) {

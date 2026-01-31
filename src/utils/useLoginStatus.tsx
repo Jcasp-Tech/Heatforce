@@ -28,7 +28,7 @@ const useLoginStatus = (loginState: LoginState) => {
       setCookie('authApp', JSON.stringify(payload), { path: '/' });
       setIsLogin(true);
     }
-  }, [loginUser]);
+  }, [loginUser, setCookie]);
 
   useEffect(() => {
     if (loginState?.data?.token) {
@@ -39,7 +39,7 @@ const useLoginStatus = (loginState: LoginState) => {
       );
     }
     // return () => {};
-  }, [loginState]);
+  }, [loginState, dispatch]);
 
   return isLogin;
 };
