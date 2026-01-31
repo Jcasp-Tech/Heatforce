@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev -p 6001",
     "build": "next build",
-    "start": "next start -p 6001",
+    "start": "next start -p 3001",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "export": "next export",
     "build-prod": "run-s clean build export",
